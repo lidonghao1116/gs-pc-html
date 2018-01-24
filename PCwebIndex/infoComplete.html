@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="css/base.css" rel="stylesheet" type="text/css"/>
+  <link href="css/head-foot.css" rel="stylesheet" type="text/css"/>
+  <link href="css/infoComplete.css" rel="stylesheet" type="text/css"/>
+  <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/utils/mapping.js"></script>
+  <script type="text/javascript" src="js/infoComplete.js"></script>
+  <title>家策好服务-商户中心</title>
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+<body>
+<!--头部-->
+<div class="fix_head">
+  <div class="head_content">
+    <a href="jiacerIndex.html" target="_self"><img class="jiacerlogo" src="img/shouyelogo.png"/></a>
+    <a class="linkTxt">点击查看《诚信经营告知书》</a>
+    <span>如入驻过程遇到问题，可以联系电话：021-54488788</span>
+  </div>
+</div>
+<section>
+  <form class="infoBox clearfix" id="form">
+    <h2>填写以下信息，共4步，完成入驻准备</h2>
+    <div class="infoList">
+      <h4 class="step_one">基本信息</h4>
+      <ul class="mt30 infoItems">
+        <li>
+          <h6 class="f16 g3">门店简称</h6>
+          <input type="text" class="inputBg" placeholder="参考格式：xx家政（xx店）" maxlength="20" name="storeName"
+                 data-name="门店简称">
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">城市</h6>
+          <div class="adress">
+            <div class="rel">
+              <select name="privince" class="inputSm address_se" id="proName">
+                <!--<option value="">选择省</option>-->
+              </select>
+              <select name="city" class="inputSm address_se" id="cityName">
+                <!--<option value="">选择市</option>-->
+              </select>
+              <select name="area" class="inputSm address_se" id="rangName">
+                <!--<option value="">选择区域</option>-->
+              </select>
+            </div>
+          </div>
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">详细地址</h6>
+          <input type="text" class="inputBg" placeholder="请精确到门牌号" maxlength="30" name="address" data-name="详细地址">
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">门店电话</h6>
+          <input type="tel" class="inputBg" placeholder="请输入电话" maxlength="15" name="telephonenumber" data-name="门店电话">
+        </li>
+      </ul>
+    </div>
+    <div class="infoList">
+      <h4 class="step_two">运营人员信息</h4>
+      <ul class="mt30 infoItems">
+        <li>
+
+          <h6 class="f16 g3">申请人姓名</h6>
+          <input type="text" class="inputBg" placeholder="请输入真实姓名" maxlength="10" name="applicantName"
+                 data-name="申请人姓名">
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">身份证号码</h6>
+          <input type="text" class="inputBg" placeholder="请输入18位身份证号" name="idCardNo" data-name="身份证号码" maxlength="18">
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">身份证照片</h6>
+          <p class="dib f14 g3 h40 lh40">身份证正反面图片，大小不超过2M</p>
+        </li>
+        <li class="mt12">
+          <h6 class=""></h6>
+          <div class="certBox mr23" id="idPros">
+            <img src="" alt="" class="upLoadImg" id="idPhotopositive">
+            <div class="imgLayer">点击重新上传</div>
+            <input type="file" class="certUpload" name="idPhotoFont" accept="image/gif,image/png,image/bmp,image/jpeg">
+          </div>
+          <div class="certBox" id="idCons">
+            <img src="" alt="" class="upLoadImg" id="idPhotonegative">
+            <div class="imgLayer">点击重新上传</div>
+            <input type="file" class="certUpload" name="idPhotoBack"
+                   accept="image/gif,image/png,image/bmp,image/jpeg">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="infoList">
+      <h4 class="step_three">公司基本信息</h4>
+      <ul class="mt30 infoItems">
+        <li>
+          <h6 class="f16 g3">企业工商名称</h6>
+          <input type="text" class="inputBg" placeholder="请输入工商登记名称" maxlength="30" name="businessName"
+                 data-name="工商名称">
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">社会信用代码</h6>
+          <input type="text" class="inputBg" placeholder="请输入18位统一社会信用代码" maxlength="18" name="socialInformationCode"
+                 data-name="社会信息代码">
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">营业执照照片</h6>
+          <p class="dib f14 g3 h40 lh40">副本照片，大小不超过2M</p>
+        </li>
+        <li class="mt12">
+          <h6 class=""></h6>
+          <div class="certBox mr23" id="license">
+            <img src="" alt="" class="upLoadImg" id="businessLicensePhoto">
+            <div class="imgLayer">点击重新上传</div>
+            <input type="file" class="certUpload" name="businessLicensePhoto"
+                   accept="image/gif,image/png,image/bmp,image/jpeg">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="infoList">
+      <h4 class="step_four">银行结算信息</h4>
+      <ul class="mt30 infoItems">
+        <li>
+          <h6 class="f16 g3">账号性质</h6>
+          <input type="radio" id="personalAccount" name="accountProperties" checked="true" value="01">
+          <label for="personalAccount" class="f16 g3 mr66 ml12">个人账号</label>
+          <input type="radio" id="companyAccoutn" name="accountProperties" value="02">
+          <label for="companyAccoutn" class="f16 g3 ml12">企业账号</label>
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">账号名称</h6>
+          <input type="text" class="inputBg" placeholder="账号所属人姓名" maxlength="30" name="accountName" data-name="账号名称">
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">银行账号</h6>
+          <input type="text" class="inputBg" placeholder="请输入银行账号数字" maxlength="20" name="bankAccount" data-name="银行账号">
+        </li>
+        <li class="mt12">
+          <h6 class="f16 g3">开户行</h6>
+          <select name="openingBand" id="bankName" class="inputMd">
+            <!--<option value="">请选择所属银行</option>-->
+          </select>
+          <input type="text" class="inputMd ml10" placeholder="请输入开户支行" maxlength="15" name="openingBandBranch"
+                 data-name="开户支行">
+        </li>
+      </ul>
+    </div>
+    <div class="btnBox">
+      <a id="submit">提交，待审核</a>
+    </div>
+  </form>
+</section>
+<!--底部-->
+<div class="footer_box">
+  <div class="footer">
+    <div class="relative">
+      <div class="partner left">
+        <h2>合作伙伴</h2>
+        <div class="logo_img">
+          <img src="img/nuoya.png"/>
+          <img src="img/fuxing.png"/>
+          <img src="img/tonglian.png"/>
+          <img src="img/zhongxin.png"/>
+        </div>
+      </div>
+      <div class="link left">
+        <h2>相关链接</h2>
+        <div class="logo_img">
+          <a href="http://www.jiacedu.com/" target="_blank"><img src="img/jiacer.png"/></a>
+        </div>
+      </div>
+      <div class="foot_wechat">
+        <h3>微信关注公众号</h3>
+        <img src="img/wechat0.jpg"/>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>上海家策教育科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;上海市徐汇区南丹东路300号亚都商务楼1201室</p>
+      <p>© 2016-2017 家策好服务&nbsp;&nbsp;&nbsp;&nbsp;沪ICP备16022947号-1</p>
+    </div>
+  </div>
+</div>
+<div class="mask">
+  <div class="notification">
+    <h4>诚信经营告知书
+      <i></i>
+    </h4>
+    <div class="noteBox">
+      <p class="title-p1">尊敬的“家策好服务”商户：</p>
+      <p class="p2">
+        为了打造诚信、合法、健康、正向的营商环境是家策好服务平台和您的共同愿望。为了保护平台声誉和您的合法权益，我们友情提示并建议：遵循法律法规、市场规则和商业道德是我们的底线，在此并不限于此范围内，我们反对任何形式的弄虚作假，损害诚实信用的基本原则；我们反对任何形式的暗箱操作，损害公平竞争的市场环境。任何触犯了我们的底线和反对事项的行为，一经查证属实，我们将严格遵循合同约定、市场规则和法律规定追究责任。
+      </p>
+      <p class="p2">
+        同时，如您发现我们平台的工作人员有损公肥私、索取或变相索取贿赂、打击报复、破坏市场公平和诚信原则等行为的，我们欢迎您的举报并坚决予以处理。举报的同时，希望您能收集保留并提供任何形式的一切相关证据。您的信任是我们共同发展的良好基础，让我们携手共同抵制歪风，共树良好风气，塑造家政行业健康、安全、有序的未来！
+      </p>
+      <p class="p2">
+        我们的举报渠道是：举报电话021-54488788。
+      </p>
+    </div>
+  </div>
+  <div class="jion_alert">
+    <h1>您已成功提交入驻申请</h1>
+    <p>三个工作日内家策服务人员会与您联系并为您开通商户账号</p>
+    <input class="i_know" value="我知道了" type="button" id="i_know"/>
+    <img class="close" src="img/joinclose.png"/>
+  </div>
+  <div class="cunzai">
+    <p>您已提交过入驻申请<br/>如有疑问，请联系客服021-6418 3797</p>
+    <input class="i_know_cunzai" value="我知道了" type="button"/>
+    <img class="close" src="img/joinclose.png"/>
+  </div>
+  <div class="jion_fail">
+    <h1>提交失败</h1>
+    <p>系统错误，请稍后重试</p>
+    <input class="i_know_fail" value="我知道了" type="button"/>
+    <img class="close" src="img/joinclose.png"/>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/head-foot.css" rel="stylesheet" type="text/css" />
+<link href="css/myReservation.css" rel="stylesheet" type="text/css" />
+<link href="css/myOrder.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/top.js"></script>
+<script type="text/javascript" src="js/myOrder.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
+<title>我的订单</title>
+</head>
+<body>
+	<!--头部-->
+	<div class="head_box">
+		<div class="head">
+			<div class="left logo">
+				<a href="index.html" target="_self">
+					<img src="img/logo0.png"/>
+				</a>
+			</div>
+			<div class="left more_s">
+				<select>
+					<option>更多导航</option>
+					<option>更多导航0</option>
+					<option>更多导航1哈</option>
+				</select>
+			</div>
+			<div class="right head_r">
+				<ul> 
+					<li><a href="login.html" target="_self">登录</a></li>
+					<li><a href="myOrder.html" target="_self">我的订单</a></li>
+					<li><a href="myProfile.html" target="_self">我的账户</a></li>
+					<li class="wechat"><a href="#">官网微信</a>
+						<div class="wechat_b">
+						</div>
+					</li>
+				</ul>
+				<div class="my_res">
+					<span><a href="myReservation.html" target="_self">我的预约>></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--主要内容-->
+	<div class="content_b">
+		<div class="content_nav">
+			<p>个人中心</p>
+			<ul>
+				<li>
+					<a href="myReservation.html" target="_self">我的预约</a>
+				</li>
+				<li><a class="active" href="myOrder.html" target="_self">我的订单</a></li>
+				<li><a href="myProfile.html" target="_self">我的资料</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main_content">
+		<ul class="content_tab">
+			<li class="active" data-stuCode="05">全部订单</li>
+			<li data-stuCode="01">待支付</li>
+			<li data-stuCode="02">待面试</li>
+			<li data-stuCode="03">已完成</li>
+			<li data-stuCode="04">已取消</li>
+		</ul>
+		<div class="line"></div>
+		<ul class="info_title">
+			<li class="first">服务阿姨</li>
+			<li>服务工种</li>
+			<li>定金</li>
+			<li>尾款</li>
+			<li>订单状态</li>
+			<li>操作</li>
+			<li class="last">备注</li>
+		</ul>
+		<div id="orderList">
+		</div>
+		<div id="pagination">
+			
+		</div>
+	</div>
+	<!--取消订单弹窗-->
+	<div class="mask">
+	</div>
+	<div class="order_alert0">
+		<p class="alert_tt">确定要取消原因吗？取消订单后，不能恢复。</p>
+		<div class="reason reason0">
+			<label>取消原因</label>
+			<textarea id="cancleReason"></textarea>
+		</div>
+		<div class="alert_bt">
+			<button class="cancel">取消</button>
+				<button class="ok">确定</button>
+		</div>
+	</div>
+	<div class="order_alert">
+		<p class="alert_tt">取消订单后，系统将扣取已支付金额的0%作为手续费，剩余金额将按原路径退回。</p>
+		<div class="fee">
+			<p class="left">退款手续费：￥<span class="shouxufee"></span></p>
+			<p class="left">实际到账：￥<span class="reallyfee"></span></p>
+		</div>
+		<div class="reason">
+			<label>取消原因</label>
+			<textarea id="cancleReasonFee"></textarea>
+		</div>
+		<div class="alert_bt">
+			<button class="cancel">取消</button>
+			<button class="okOne">确定</button>
+		</div>
+	</div>
+	<!--底部-->
+	<div class="foot_box">
+		<div class="foot">Copyright@2016上海家策教育科技有限公司<span>沪IPC备12345678号</span></div>
+	</div>
+	<div class="bottom_fixed">
+		<img class="top_img" src="img/qqren.png"/>
+		<div class="link_phone">
+			<p>服务热线</p>
+			<p>021-6666&nbsp;&nbsp;8888</p>
+		</div>
+		<div class="qq_link">
+			<p>QQ交谈</p>
+			<p>QQ交谈</p>
+			<p>QQ交谈</p>
+		</div>
+		<div class="lin_wechat">
+		</div>
+		<div id="goTopBtn" class="back_top">返回顶部</div>
+	</div>
+</body>
+<script type="text/javascript">var
+				pageNumber = 1;
+				var pageSize = 6;	
+				function pagination(records) {
+					$("#pagination").pagination(records, {
+						num_edge_entries: 1,
+						num_display_entries: 4,
+						current_page: pageNumber - 1,
+						items_per_page: pageSize,
+						prev_text: "上一页",
+						next_text: "下一页",
+						callback: page_index
+					});
+				};
+				function page_index(page_index){
+				var pageNumber = page_index+1;
+				var orderstatus="05";
+				$(".content_tab li").each(function(){
+					if($(this).hasClass("active")){
+						orderstatus=$(this).attr("data-stuCode");	
+					}
+				})
+				myOrders(pageNumber,pageSize,orderstatus);
+			};
+				
+				function myOrders(pageNumber,pageSize,stuCode) {
+					$.ajax({
+						url: publicPath + "/api/orders/orders",
+						type: "post",
+						data: {
+							pageNumber: pageNumber,
+							pageSize: pageSize,
+							orderstatus: stuCode
+						},
+						dataType: "json",
+						async:false,
+						success: function success(data) {
+							if(data.success) {
+								if(data.code == 0) {
+									var dataJD = data.jsonData.rows;
+									var html = "";
+									$.each(dataJD, function(i, item) {
+										html += "<table cellspacing='0' cellpadding='0' class='orderlist'>" +
+											"<tr>" +
+											"<th colspan='7'>" +
+											"<p>" + item.websiteName +
+											"<span>" + "订单总额：￥"+"<a class='order_amount'>" + item.OrderDeposit +"</a>"+ "</span>" +
+											 "</p>"+
+											"</th>" +
+											"<tr>" +
+											"<td class='first' data-staffName='"+item.staffName+"'>" +
+											"<p>" + item.staffName + "</p>" +
+											"<p>" + item.ServiceItemNAME + "</p>"+
+										    "<p>" + item.age + "岁/属" + item.zodiac_NAME + "/" + item.nativePlace_NAME + "人 " + "</p>" +
+											"</td>" +
+											"<td>"+item.ServiceItemNAME+"</td>"+
+											"<td>" + "￥" + "<a class='pay_dj'>"+item.OrderDeposit + "</a>"+"</td>" +
+											"<td>" + "￥" + "<a class='pay_wk'>"+item.OrderBalance + "</a>"+"</td>" +
+											"<td>" +
+											"<p class='status'>" +
+											"<span class='status_d' data-stuCode='"+item.OrderStatus+"'>" + item.OrderStatus + "</span>" +
+											"</p>" +
+											"<p>" +
+											"<a class='details' data-orderNo='"+ item.OrderNo +"' target='_blank'>" +
+											"订单详情" + "</a>" +
+											"</p>" +
+											"</td>" +
+											"<td>" +
+											"<p>" +
+											"<span class='pay_bt' data-orderNo='" + item.OrderNo + "' data-orderstatus='" + item.OrderStatus + "'>" + "</span>" +
+											"</p>" +
+											"<p>" +
+											"<span class='cancel_order' data-orderNo='" + item.OrderNo + "' data-orderstatus='" + item.OrderStatus + "'>" + "</span>" +
+											"</p>" +
+											"</td>"+
+											"<td class='last'>" + "<p>" + "1" + "</p>" + "</td>" +
+											"</tr>" +
+											"</table>";
+									});
+									$("#orderList").html(html);
+									$("#orderList .first").each(function(){
+				                		 if($(this).attr("data-staffName")=="undefined"){
+				                			 $(this).text("");
+				                		 }
+				                	 })
+
+									$(".status_d").each(function(){
+										if($(this).attr("data-stuCode") == 01||$(this).attr("data-stuCode") == 03) {
+											$(this).html("待支付");
+										}else if($(this).attr("data-stuCode") == 02){
+											$(this).html("待面试");
+										}
+										else{	
+										$(this).removeClass("status_d").addClass("status_cancel");
+										}
+									})
+									$(".pay_bt").each(function() {
+										if($(this).attr("data-orderstatus") == 01) {
+											$(this).html("支付定金");
+										}
+										if($(this).attr("data-orderstatus") == 03) {
+											$(this).html("支付尾款");
+										}
+										if($(this).attr("data-orderstatus") == 02) {
+											$(this).css("display","none");
+										}
+									})
+									$(".cancel_order").each(function() {
+										if($(this).attr("data-orderstatus") == 01 || $(this).attr("data-orderstatus") == 03||$(this).attr("data-orderstatus") == 02) {
+											$(this).html("取消订单");
+										}
+									})
+									console.log(data.msg);
+								} else {
+									console.log(data.msg);
+								}
+							} else {
+								console.log(data.msg);
+							}
+						}
+					});
+				};
+				$(function(){
+					$.ajax({
+						url: publicPath +"/api/orders/orders",
+						type: "post",
+						data: {
+							pageNumber: pageNumber,
+							pageSize: pageSize,
+							orderstatus:"05"},
+						dataType: "json",
+						async:false,
+						success: function success(data) {
+							if(data.success) {
+								if(data.code == 0) {
+									var dataJD = data.jsonData;
+									pagination(dataJD.records);
+									console.log(data.msg);
+								} else{
+									console.log(data.msg);
+								}
+							} else {
+								window.location.href="login.html";
+								console.log(data.msg);
+							}
+						}
+					});
+				})
+				
+				$(".content_tab li").click(function(){
+					$(".content_tab  li ").removeClass("active");
+					$(this).addClass("active");
+					var orderstatus = $(this).attr("data-stuCode");
+					$.ajax({
+						url: publicPath + "/api/orders/orders",
+						type: "post",
+						data: {
+							orderstatus: orderstatus
+						},
+						dataType: "json",
+						async:false,
+						success: function success(data) {
+							if(data.success) {
+								if(data.code == 0) {
+									var dataJD = data.jsonData;
+									pagination(dataJD.records);
+									console.log(data.msg);
+								} else {
+									console.log(data.msg);
+								}
+							} else {
+								console.log(data.msg);
+							}
+						}
+					});
+					myOrders(pageNumber,pageSize,orderstatus);
+				})
+				//订单取消
+				$("#orderList").on("click",".cancel_order",function(){
+					var orderNo=$(this).attr("data-orderNo");				
+					if($(this).attr("data-orderstatus")==01){
+						$(".ok").val(orderNo);
+						$(".mask").show();
+						$(".order_alert0").show();
+					}else{
+						$(".okOne").val(orderNo);
+						var feeRatio=0;
+						var handlingFee=parseFloat($(".pay_dj").html())*parseFloat(feeRatio);
+						var reallyFee=parseFloat($(".pay_dj").html())-handlingFee;
+						$(".shouxufee").html(handlingFee);
+						$(".reallyfee").html(reallyFee);
+						$(".mask").show();
+						$(".order_alert").show();
+					}	
+				})
+				//取消确定
+				$(".ok").click(function(){
+			        orderNo=$(".ok").val();
+			        var cancleReason = $("#cancleReason").val();
+			        if(cancleReason==""){
+			        	alert("取消原因不能为空！");
+			        	return
+			        }
+					 $.ajax({
+						url: publicPath + "/api/reserveorders/cancelreserveorders",
+						type: "post",
+						data: {
+							orderNo:orderNo,
+							cancleReason:cancleReason,
+						},
+						dataType: "json",
+						success: function success(data) {
+							if(data.success) {
+								if(data.code == 0) {
+									window.location.reload();
+									console.log(data.msg);
+								} else {
+									console.log(data.msg);
+								}
+							} else {
+								console.log(data.msg);
+							}
+						}
+					});
+			})
+				//取消确定
+				$(".okOne").click(function(){
+			        orderNo=$(".okOne").val();
+			        var handlingFee=$(".shouxufee").html();
+			        var  reallyFee=$(".reallyfee").html();
+			        var cancleReason = $("#cancleReasonFee").val();
+			        if(cancleReason==""){
+			        	alert("取消原因不能为空！");
+			        	return
+			        }
+					 $.ajax({
+						url: publicPath + "/api/reserveorders/cancelreserveorders",
+						type: "post",
+						data: {
+							orderNo:orderNo,
+							counterFee:handlingFee,
+							cancleReason:cancleReason,
+							 tradeAmount:reallyFee
+						},
+						dataType: "json",
+						success: function success(data) {
+							if(data.success) {
+								if(data.code == 0) {
+									window.location.reload();
+									console.log(data.msg);
+								} else {
+									console.log(data.msg);
+								}
+							} else {
+								console.log(data.msg);
+							}
+						}
+					});
+			})
+				//关闭弹窗
+				$(".alert_bt .cancel").click(function(){
+					$(".mask,.order_alert0,.order_alert").hide();
+				});
+				$(".close,.mask0").click(function(){
+					$(".mask0,.card_detail").hide();
+				});
+				//订单详情
+				$("#orderList").on("click",".details",function(){
+					var orderNo=$(this).attr("data-orderNo");
+		            location.href="orderDetail.html?orderNo="+orderNo;
+				})
+				//定金支付
+				$("#orderList").on("click",".pay_bt",function(){
+				var orderNo = $(this).attr("data-orderNo");
+				var orderStatus = $(this).attr("data-orderstatus");
+				var order_amount = $(this).parents('tr').prev().find(".order_amount").text();
+				var pay_amount = "";
+				if(orderStatus == "01"){
+					var pay_dj = $(this).parents("tr").find(".pay_dj").text();
+					pay_amount = pay_dj;
+				}else{
+					var pay_wk = $(this).parents("tr").find(".pay_wk").text();
+					pay_amount = pay_wk;
+				}
+				location.href="orderPay.html?orderNo="+orderNo+"&orderAmount="+order_amount+"&orderStatus="+orderStatus+"&payAmount="+pay_amount 
+			})
+</script>
+</html>

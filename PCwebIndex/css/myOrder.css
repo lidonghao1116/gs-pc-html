@@ -1,0 +1,584 @@
+#orderList {
+    margin: 0 20px;
+}
+#pagination {
+    margin: 36px 20px 61px;
+}
+/*myOrder鎴戠殑璁㈠崟*/
+.orderlist tr th p span {
+    color: #808080;
+    float: right;
+    margin-right: 8px;
+    font-size: 14px;
+}
+.orderlist tr td p span.pay_bt {
+    padding: 3px 10px;
+    background-color: #ff9900;
+    color: #fff;
+    line-height: 24px;
+	cursor: pointer;
+}
+.cancel_order{
+	cursor: pointer;
+}
+.order_alert{
+	width:390px;
+}
+.order_alert0{
+	z-index: 1016;
+	display:none;
+	background-color: #fff;
+    padding: 18px 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+	margin-left:-208px;
+	margin-top:-118px;
+    width: 341px;
+}
+.order_alert {
+	z-index: 1016;
+	display:none;
+    background-color: #fff;
+    padding: 18px 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+	margin-left:-208px;
+	margin-top:-118px;
+    width: 386px;
+}
+.alert_tt {
+    padding: 5px 0 5px 24px;
+    font-size: 12px;
+    color: #ff681e;
+    line-height: 18px;
+    border: 1px solid #e6e6e6;
+	background:url(../img/tan.png) no-repeat;
+    background-position: 5px 9px;
+    background-color: #f5f5f5;
+	margin-bottom:10px;
+}
+.fee {
+    overflow: hidden;
+}
+.fee p {
+    width: 50%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+.fee p span {
+    color: #ff681e;
+}
+.reason {
+    padding-top: 20px;
+}
+.reason textarea {
+    width: 290px;
+    height: 46px;
+    padding: 5px;
+	background-color: #f4f4f4;
+	border:1px solid #e6e6e6;
+}
+.reason0 textarea {
+	 width: 248px;
+}
+.reason label {
+    width: 80px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+.alert_bt {
+    margin-top: 22px;
+    text-align: center;
+}
+/*璁㈠崟璇︽儏*/
+.order_info {
+    overflow: hidden;
+}
+.order_left {
+    width: 419px;
+    border-right: 1px solid #e6e6e6;
+    text-align: center;
+    font-weight: normal;
+    min-height: 185px;
+}
+.order_left h1 {
+    font-weight: normal;
+    font-size: 22px;
+    margin-top: 20px;
+    color: #ff5e0f;
+}
+.order_left h5 {
+    font-size: 14px;
+    font-weight: normal;
+}
+.order_left h4 {
+    color: #ff681e;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 25px;
+}
+.order_left h2 {
+    font-size: 36px;
+    font-weight: normal;
+    color: #808080;
+    margin-top: 40px;
+    height: 70px;
+}
+.order_left h3 a {
+    background-color: #ff9900;
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-top: 10px;
+	cursor: pointer;
+}
+.order_left h6 {
+    line-height: 20px;
+    margin-top: 5px;
+}
+.order_left h6 span {
+    font-weight: normal;
+    color: #808080;
+    font-size: 12px;
+    padding-left: 20px;
+	background:url(../img/clock.png) no-repeat;
+	background-position:left center
+}
+.order_left p a {
+    font-size: 14px;
+    color: #808080;
+}
+.order_left p {
+    margin-top: 33px;
+}
+.order_left p a.cancel{
+    margin-right: 88px;
+    cursor: pointer;
+}
+.order_left p a:hover{
+	color:#333;
+}
+.order_right {
+    width: 638px;
+	padding-top: 36px;
+}
+.order_right h2 {
+    padding-left: 45px;
+    min-height: 32px;
+}
+.order_right h2 img {
+
+}
+.order_right h2 a {
+    font-weight: normal;
+    font-size: 16px;
+   padding: 0 20px 0 55px;
+	line-height: 22px;
+    display: inline-block;
+	cursor: text;
+}
+.order_right h2 span {
+    font-weight: normal;
+    font-size: 14px;
+    color: #ff5e0f;
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    margin-top: 17px;
+}
+.order_right h2 span.moneyStatu{
+  margin-top: 2px;
+}
+.order_right h2 span.m_left{
+	margin-left:70px;
+}
+.order_right h2 span.active{
+	color:#b2b2b2;
+}
+.order_right p {
+    font-size: 14px;
+    color: #4c4c4c;
+    padding-left: 36px;
+	    margin-top: 30px;
+}
+.order_right p span i{
+  color:#808080;
+  font-style: normal;
+}
+.order_right p span {
+    float: right;
+}
+.pay0{
+	background:url(../img/card.png) no-repeat;
+	background-position:20px -74px;
+}
+.pay0_sp{
+
+	background-position:20px 1px;
+}
+.pay1{
+	background:url(../img/card.png) no-repeat;
+	background-position:20px -74px;
+}
+.pay1_sp{
+	background-position:20px 1px;
+}
+.interview{
+	background:url(../img/mainshi.png) no-repeat;
+	background-position:20px -72px;
+}
+.interview_sp{
+	background-position:20px 1px;
+}
+/*璁㈠崟鏀粯*/
+.time {
+    color: #333333;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+.time span{
+	color:#ff681e;
+}
+.pay_content {
+    background-color: #fff;
+    padding: 15px 20px;
+	margin-bottom:100px;
+}
+.pay_info,.pay_way {
+    border: 1px solid #e6e6e6;
+    margin:18px 0 30px 6px;
+    padding: 30px 20px;
+	overflow: hidden;
+}
+.pay_info p{
+    font-size: 16px;
+    line-height: 30px;
+}
+.pay_info p span {
+    margin-left: 25px;
+}
+.pay_info p span.orange{
+	color:#ff681e;
+}
+.pay_info p span.orange a{
+	color:#ff681e;
+}
+.alipay input,.wechat_pay input {
+    float: left;
+    display: block;
+	margin-left: 5px;
+    margin-top: 19px;
+}
+.alipay label ,.wechat_pay label {
+    display: block;
+    width: 200px;
+    height: 48px;
+    border: 1px solid #ccc;
+    float: left;
+	margin-left: 12px;
+	margin-right:125px;
+    cursor: pointer;
+}
+.alipay label.active ,.wechat_pay label.active {
+	border: 1px solid #ff9900;
+}
+.alipay label{
+	background:url(../img/pay.png) no-repeat;
+	background-position:center;
+}
+.wechat_pay label {
+	background:url(../img/wechatpay.png) no-repeat;
+	background-position:center;
+}
+a.pay_bt {
+    width: 88px;
+    height: 30px;
+    background-color: #ff9900;
+    color: #fff;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 30px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+/*鏀粯*/
+.pay_alert{
+	display:none;
+	padding:25px 15px;
+	width:250px;
+	z-index: 1016;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+	margin-left:-125px;
+	margin-top:-118px;
+}
+.pay_tt{
+	padding: 5px 0 5px 61px;
+    font-size: 12px;
+    color: #ff681e;
+    line-height: 18px;
+    border: 1px solid #e6e6e6;
+	background:url(../img/tan.png) no-repeat;
+    background-position: 41px 9px;
+    background-color: #f5f5f5;
+	margin:10px 0 36px;
+}
+/* .alert_bt {
+    margin-top: 22px;
+    text-align: center;
+}
+.alert_bt button {
+    width: 84px;
+    height: 32px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+	font-family: "微软雅黑";
+}
+.ok {
+    background-color: #ff9900;
+}
+.okOne{
+    background-color: #ff9900;
+} */
+/* .mask0 {
+    z-index: 1015;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+} */
+.alert {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -250px;
+    margin-left: -210px;
+    width: 420px;
+    background-color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.card_detail {
+    display: none;
+    z-index: 1016;
+    width: 768px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -384px;
+    height: 500px;
+    overflow-y: scroll;
+    margin-top: -250px;
+}
+.agreement{
+	display: none;
+    z-index: 1016;
+    width: 768px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -384px;
+    height: 500px;
+    overflow-y: scroll;
+    margin-top: -250px;
+    text-align:center;
+}
+.agreement h2 {
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+}
+.agreement img {
+    width: 90%;
+    height: auto;
+}
+.list_box{
+	border-bottom:6px solid #f5f5f5;
+	padding: 0 24px;
+}
+.list_box_last{
+	border-bottom:0;
+}
+.title_h1{
+	height:52px;
+	line-height:52px;
+	font-size:18px;
+	font-weight: normal;
+	border-bottom:1px solid #e6e6e6;
+}
+.basic{
+	padding:11px 0 26px 0;
+	overflow: hidden;
+}
+.basic_l {
+    width: 104px;
+    height: 121px;
+}
+.basic_r {
+    width: 575px;
+    margin-left: 24px;
+    padding-top: 14px;
+}
+.basic_r h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
+.basic_r h3 {
+    color: #808080;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 12px;
+}
+.basic_r h3 span {
+    font-size: 18px;
+    color: #333333;
+    margin-right: 32px;
+}
+.basic_r p {
+    font-size: 16px;
+    margin-top: 19px;
+}
+.basic_r p span {
+    color: #808080;
+    margin: 0 12px;
+}
+.paper {
+    overflow: hidden;
+    padding: 20px 0 17px;
+}
+.paper li {
+    height: 18px;
+    padding-left: 28px;
+    float: left;
+    margin-bottom: 7px;
+    margin-right: 66px;
+	background:url(../img/zhengjian.png) no-repeat;
+	background-position:left center;
+}
+.fuwu{
+	font-size: 14px;
+}
+.fuwu_l {
+    width: 80px;
+    text-align: right;
+    color: #808080;
+    float: left;
+    font-size: 14px;
+    line-height: 34px;
+}
+.fuwu_r {
+    padding-left: 86px;
+}
+.fuwu_r ul {
+    overflow: hidden;
+}
+.fuwu_r ul li {
+    margin: 7px 24px 8px 0;
+    float: left;
+
+}
+.fuwu {
+    margin: 9px 0;
+}
+.fuwu_p{
+	line-height:34px;
+}
+p.p_text {
+    line-height: 24px;
+    font-size: 14px;
+    margin: 12px 0;
+}
+.close {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    right: 8px;
+	cursor:pointer;
+}
+.close  img{
+	width: 18px;
+    height: 18px;
+}
+.pay_orcode {
+	display:none;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1016;
+    padding: 50px 70px;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -240px;
+}
+.orcode {
+    border: 1px solid #e6e6e6;
+	text-align:center;
+}
+.orcode img {
+    width:301px;
+    height: 301px;
+}
+.orcode p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 16px 0 8px;
+	background:url(../img/saomaio.png) no-repeat;
+	background-position: 48px center;
+}
+.contracts{
+	cursor: pointer;
+}
+.error{
+    color: red;
+    margin-left: 80px;
+    font-size: 12px;
+}
+.change_bt {
+    margin-top: 0;
+}
+.money {
+    border-bottom: 1px dashed #f0f0f0;
+    position: relative;
+    padding: 38px 0 36px;
+}
+.money img.left_bg {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+.money img.right_bg {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+}
+.money p {
+    width: 50%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.money p span {
+    color: #ff681e;
+}

@@ -1,0 +1,622 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="css/head-foot.css" rel="stylesheet" type="text/css" />
+		<link href="css/myReservation.css" rel="stylesheet" type="text/css" />
+		<link href="css/myProfile.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/top.js"></script>
+		<title>家策好服务-我的账户</title>
+	</head>
+
+	<body>
+		<!--弹窗-->
+		<div class="mask"></div>
+		<div class="alert_address" id="delete_ad">
+			<input name="id" type="hidden" value="">
+			<div class="ad_close"></div>
+			<h1>删除服务地址</h1>
+			<p>确定删除服务地址吗？</p>
+			<div class="alert_button">
+				<a class="cancel" id="cancel">取消</a>
+				<a class="confirm" id="ok" >确定</a>
+			</div>
+		</div>
+		<div class="alert_address" id="save_ad">
+			<input name="id" type="hidden" value="">
+			<div class="ad_close"></div>
+			<h1>保存地址</h1>
+			<p>最多只能添加三条地址</p>
+			<div class="alert_button">
+				<a class="confirm" href="myProfile.html" >确定</a>
+			</div>
+		</div>
+		<div class="alert_address" id="edit_ad">
+			<div class="ad_close"></div>
+			<h1>修改服务地址</h1>
+			<input name="id" type="hidden" value="">
+			<div class="ad_info_box">
+				<div class="ad_info_enter">
+					<label class="ad_info_enter_l">姓名：</label>
+					<div class="ad_info_enter_r">
+						<input  name="userName" type="text" />
+					</div>
+				</div>
+				<div class="ad_info_enter">
+					<label class="ad_info_enter_l">联系电话：</label>
+					<div class="ad_info_enter_r">
+						<input name="phone" type="text" />
+					</div>
+				</div>
+				<div class="ad_info_enter">
+					<label class="ad_info_enter_l">服务地址：</label>
+					<div class="ad_info_enter_r">
+						<select id="proName" name="province">
+							<option value="" class="ad_se">请选择省</option>
+						</select>
+						<select id="cityName" name="city">
+							<option value="" class="ad_se">请选择市</option>
+						</select>
+						<select id="rangName" name="district">
+							<option value="" class="ad_se">请选择区</option>
+						</select>
+					</div>
+				</div>
+				<div class="ad_info_enter">
+					<label class="ad_info_enter_l">详细地址：</label>
+					<div class="ad_info_enter_r">
+						<input id="address" name="address" class="address" type="text" />
+					</div>
+				</div>
+			</div>
+			<div class="ad_save">
+				<a id="ad_save">保存</a>
+			</div>
+		</div>
+		<!--头部-->
+		<div class="head_box">
+			<div class="head">
+				<div class="left logo">
+					<a  target="_self">
+						<img src="img/logo0.png"/>
+					</a>
+				</div>
+				<div class="left more_s">
+					<select>
+						<option>更多导航</option>
+						<option>更多导航0</option>
+						<option>更多导航1哈</option>
+					</select>
+				</div>
+				<div class="right head_r">
+					<ul>
+						<li><a >登录</a></li>
+					<li><a >退出</a></li>
+					<li><a >我的预约</a></li>
+					<li><a >我的账户</a></li>
+					<li class="wechat"><a>官网微信</a>
+							<div class="wechat_b">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--主要内容-->
+		<div class="content_b">
+			<div class="content_nav">
+				<p>个人中心</p>
+				<ul>
+					<li>
+						<a href="myReservation.html" target="_self">我的预约</a>
+					</li>
+					<li>
+						<a href="myOrder.html" target="_self">我的订单</a>
+					</li>
+					<li>
+						<a class="activesp" href="myProfile.html" target="_self">我的账户</a>
+					</li>
+				</ul>
+				<a class="back_in" href="jiacerIndex.html">回到首页<img src="img/indexbg.png"/></a>
+			</div>
+		</div>
+		<div class="main_content mine_content">
+			<div class="main_box">
+				<h2 class="title_s">基本资料</h2>
+				<div class="person_file">
+					<ul>
+						<li><label>手机号</label><div class="list" id="telNum"></div></li>
+						<li><label>姓名</label><div class="list" id="name"><input name="name" class="in_val" type="text" value=""/><span class="tip">完善姓名之后，登录之后将显示名称</span></div></li>
+						<li>
+							<label>性别</label>
+							<div class="list" id="sex">
+								<div class="radio_box_box">
+									<div class="radio_box">
+										<input type="radio" name="sex" value="01" checked="checked">
+										<div class="circle-box">
+											<span class="circle"></span>
+										</div>
+									</div>男
+								</div>
+								<div class="radio_box_box">
+									<div class="radio_box">
+										<input type="radio" name="sex" value="02" checked="checked">
+										<div class="circle-box">
+											<span class="circle"></span>
+										</div>
+									</div>女
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="pro_btn">
+						<button  class="pro_btn_sub">保存</button>
+					</div>
+				</div>
+			
+				<div class="pro_file_meg">
+					<h2 class="title_s">服务地址信息<span>（最多可以添加3条服务地址）</span>  <a class="add_ad">+ 新增地址</a></h2>
+					<table border="0" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<td class="center" width=100px>姓名</td>
+								<td width=150px>联系电话</td>
+								<td width=200px>服务区域</td>
+								<td width=300px>详细地址</td>
+								<td class="center">操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- <tr>
+								<td><p>张三</p></td>
+								<td><p>13061797865</p></td>
+								<td><p>上海市-徐汇区-城区</p></td>
+								<td><p>南丹东路300号</p></td>
+								<td class="center"><p><a class="ad_edit">修改</a>|<a class="delete">删除</a></p></td>
+							</tr>
+							<tr>
+								<td><p>张三</p></td>
+								<td><p>13061797865</p></td>
+								<td><p>上海市-徐汇区-城区</p></td>
+								<td><p>南丹东路300号</p></td>
+								<td class="center"><p><a class="ad_edit">修改</a>|<a class="delete">删除</a></p></td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+    	</div>
+	<!--底部-->
+	<!-- <div class="foot_box ">
+		<div class="foot ">Copyright@2016上海家策教育科技有限公司<a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备16022947号-1</a></div>
+	</div> -->
+	<iframe scrolling="no" src="footer.html" width="100%" frameborder="0" height="270px"></iframe>
+
+</body>
+<script>
+var publicPath="http://"+window.location.host+"/fbeeWebConsole_web";
+function onError (msg,self) {
+	if(self.nextAll().hasClass('validation')){
+		self.nextAll('.validation').text(msg);
+		return;
+	}
+	self.parent().append("<span class='validation'>"+msg+"</span>");
+}
+
+function onSuccess(self) {
+	self.nextAll('.validation').remove();
+}
+
+// 修改地址初始化省市区
+function cityList(province,city){
+		$("#cou_sel").html("");
+		$.ajax({
+			url:publicPath+"/profile/api/common/getAreaData/c002",
+			type:"post",
+			data:{pcode:province},
+			dataType:"json",
+			success:function(data){
+				if(data.success){
+					if(data.code == 0){
+						var dataJD = data.jsonData;
+						var html="<option value=''>请选择市</option>";
+						$.each(dataJD, function(i,item) {
+							if(item.areaCode==city){
+								html += "<option selected='selected' value='" + item.areaCode + "'>" + item.areaName + "</option>";
+							}else{
+								html += "<option value='" + item.areaCode + "'>" + item.areaName + "</option>";
+							}
+						});
+						$("select[name='city']").html(html);
+						console.log(data.msg);
+					}else{
+						console.log(data.msg);
+					}
+				}else{
+					console.log(data.msg);
+				}
+			},
+		});
+	}
+
+function districtList(city,district){
+		$.ajax({
+			url:publicPath+"/profile/api/common/getAreaData/c003",
+			type:"post",
+			data:{pcode:city},
+			dataType:"json",
+			success:function(data){
+				if(data.success){
+					if(data.code == 0){
+						var dataJD = data.jsonData;
+						var html="<option value=''>请选择区</option>";
+						$.each(dataJD, function(i,item) {
+							if(item.areaCode==district){
+								html += "<option selected='selected' value='" + item.areaCode + "'>" + item.areaName + "</option>";								
+							}else{
+								html += "<option value='" + item.areaCode + "'>" + item.areaName + "</option>";
+							}
+						});
+						$("select[name='district']").html(html);
+						console.log(data.msg);
+					}else{
+						console.log(data.msg);
+					}
+				}else{
+					console.log(data.msg);
+				}
+			},
+		});
+	}
+
+
+$(document).ready(function(){
+		//加载省
+		$.ajax({
+			type:"POST",
+			url:publicPath+"/profile/api/common/getAreaData/c001",
+			success:function(data){
+				if(data.success){
+	                if(data.code == 0){
+	                	var dataJD = data.jsonData;
+	                	var html = "<option value=''>请选择省</option>";
+						$.each(dataJD, function(i,item) {
+							html += "<option value='" + item.areaCode + "'>" + item.areaName + "</option>";
+						});
+						$("select[name='province']").html(html);
+	                	console.log(data.msg);
+	                }else{
+	                    console.log(data.msg);
+	                }
+	            }else{
+	                console.log(data.msg);
+	            }
+			},
+			error:function(){
+
+			}
+		});
+		$.ajax({
+			type:"POST",
+			url:publicPath+"/profile/api/member/getMemberInfo",
+			success:function(data){
+				if(data.success){
+	                if(data.code == 0){
+	                	var dataJD = data.jsonData;
+	                	$("#telNum").html(dataJD[0].mobile);
+	                	$("#name input[name='name']").val(dataJD[0].name);
+	                	if(dataJD[0].sex!=null && dataJD[0].sex!=""){
+							var sex = dataJD[0].sex.split(",");
+							if(sex[0]=="01"){
+								$("#sex input[name='sex']").eq(0).attr("checked","checked").siblings(".circle-box").addClass("active");
+							}else if(sex[0]=="02"){
+								$("#sex input[name='sex']").eq(1).attr("checked","checked").siblings(".circle-box").addClass("active");;
+							}
+		                	
+	                	}
+						console.log(data.msg);
+	                }else{
+	                    console.log(data.msg);
+	                }
+	            }else{
+	                console.log(data.msg);
+	            }
+			},
+			error:function(){
+			}
+		});
+		// 获取地址
+		$.ajax({
+				url:publicPath+"/api/user/address",
+				type:"get",
+				data:{},
+				dataType:"json",
+				success:function(data){
+					if(data.success){
+		                if(data.code == 0){
+		                	var dataJD = data.jsonData;
+							if(dataJD==""){
+								$(".pro_file_meg table tbody").html("<tr><td colspan='5'><p class='no_address'>暂无服务地址~</p></td></tr>");
+							}else{ 
+								if(dataJD.length>2){
+									$(".add_ad").remove();
+								}
+								var html="";
+								$.each(dataJD,function(i,item){
+									html +="<tr>"+
+											"<td class='center'><p>"+item.userName+"</p></td>"+
+											"<td><p>"+item.phone+"</p></td>"+
+											"<td><p>"+item.provinceValue+"-"+item.cityValue+"-"+item.districtValue+"</p></td>"+
+											"<td><p>"+item.address+"</p></td>"+
+											"<td class='center'>"+
+												"<p><input type='hidden' value='"+item.id+"'><a class='ad_edit'>修改</a>|<a class='delete'>删除</a></p>"+
+											"</td>"+
+										"</tr>";
+								});
+								$(".pro_file_meg table tbody").html(html);
+							}
+		                }else{
+		                    console.log(data.msg);
+		                }
+		            }else{
+		                console.log(data.msg);
+		            }
+				},
+			});
+
+		$("select[name='province']").change(function(){
+			var province = $(this).val();
+			cityList(province,"");
+		});
+		$("select[name='city']").change(function(){
+			var city = $(this).val();
+			districtList(city,"");
+		});
+		// 编辑
+		// $(".write").click(function(){
+		// 	$(this).hide();
+		// 	$(".no_edit").hide();
+		// 	$(".edit,.pro_btn").show();
+		// 	$(".in_val").each(function(){
+		// 		var pVal = $(this).parent(".edit").siblings("p").text();
+		// 		$(this).val(pVal);
+		// 	})
+		// });
+		// // 取消
+		// $(".pro_btn_res").click(function(){
+		// 	$(".write").show();
+		// 	$(".no_edit").show();
+		// 	$(".edit,.pro_btn").hide();
+		// });
+		// 保存基本信息
+		$(".pro_btn_sub").click(function(){
+			$(".edit input").trigger("blur");
+			if ($(".validation").length>0) {
+						return;
+			};
+			var name = $("input[name='name']").val();
+			var sex = $("#sex input[name='sex']:checked").val();
+			// var qq = $("input[name='qq']").val();
+			// var wechat = $("input[name='wechat']").val();
+			$.ajax({
+				url:publicPath+"/profile/api/member/updateMemberInfo",
+				type:"post",
+				data:{name:name,sex:sex},
+				dataType:"json",
+				success:function(data){
+					if(data.success){
+		                if(data.code == 0){
+							toast_tip("保存成功");
+							setTimeout(function(){
+								location.reload();	
+							},2100);
+		                	console.log(data.msg);
+		                }else{
+		                    console.log(data.msg);
+		                }
+		            }else{
+		                console.log(data.msg);
+		            }
+				},
+			});
+		});
+		// 修改地址
+		$(".pro_file_meg").on("click",".ad_edit",function(){
+			 var id=$(this).siblings("input").val();
+			$("#edit_ad input[name='id']").val(id);
+			$.ajax({
+				url:publicPath+"/api/user/address/"+id,
+				type:"get",
+				data:{},
+				dataType:"json",
+				success:function(data){
+					if(data.success){
+		                if(data.code == 0){
+							$(".mask,#edit_ad").show();
+							 $(".alert_address h1").html("修改服务地址");
+							var dataJD = data.jsonData;
+		                	$("input[name='userName']").val(dataJD.userName||"");
+							$("input[name='phone']").val(dataJD.phone||"");
+							$("input[name='address']").val(dataJD.address);
+							 $("select[name='province']").val(dataJD.province);
+							 cityList(dataJD.province,dataJD.city);
+							 districtList(dataJD.city,dataJD.district);
+
+		                }else{
+		                    console.log(data.msg);
+		                }
+		            }else{
+		                console.log(data.msg);
+		            }
+				},
+			});
+		});
+		// 新增地址
+		$(".pro_file_meg").on("click",".add_ad",function(){
+			$(".mask,#edit_ad").show();
+			$("#edit_ad input,#edit_ad select").val("");
+			$("select[name='city'],select[name='district']").html("<option value=''>请选择</option>");
+			 $(".alert_address h1").html("新增服务地址");
+		});
+		// 删除地址
+		$(".pro_file_meg").on("click",".delete",function(){
+			$(".mask,#delete_ad").show();
+			var id=$(this).siblings("input").val();
+			$("#delete_ad input[name='id']").val(id);
+		});
+		 // 性别选择
+            $("#sex").on("click",".radio_box input[type='radio']",function(){
+                 $(this).siblings(".circle-box").addClass("active");
+                $(this).parents(".radio_box_box").siblings(".radio_box_box").find(".circle-box").removeClass("active");
+            });
+		$("#ok").click(function(){
+			var addressId = "/"+$("#delete_ad input[name='id']").val();
+			$.ajax({
+				url:publicPath+"/api/user/address"+addressId+"/@delete",
+				type:"post",
+				data:{},
+				dataType:"json",
+				success:function(data){
+					if(data.success){
+		                if(data.code == 0){
+		                	location.reload();
+		                	console.log(data.msg);
+		                }else{
+		                    console.log(data.msg);
+		                }
+		            }else{
+		                console.log(data.msg);
+		            }
+				},
+			});
+		})
+		//关闭地址弹窗
+		$(".ad_close,#cancel,.mask").click(function(){
+			$(".mask,.alert_address").hide();
+		});
+		// 提交保存地址
+		$("#ad_save").click(function(){
+			$("#edit_ad input,#edit_ad select").trigger("blur");
+			if ($(".validation").length>0) {
+						return;
+			};
+			var addressId="";
+			if($("#edit_ad input[name='id']").val()!=""){
+				addressId = "/"+$("#edit_ad input[name='id']").val();
+			}
+			var userName = $("input[name='userName']").val();
+			var phone = $("input[name='phone']").val();
+			var province = $("select[name='province']").val();
+			var city = $("select[name='city']").val();
+			var district = $("select[name='district']").val();
+			var address = $("input[name='address']").val();
+			$.ajax({
+				url:publicPath+"/api/user/address"+addressId,
+				type:"post",
+				data:{
+					userName:userName,
+					phone:phone,
+					province:province,
+					city:city,
+					district:district,
+					address:address
+					},
+				dataType:"json",
+				success:function(data){
+					if(data.success){
+		                if(data.code == 0){
+		                	location.reload();
+		                	console.log(data.msg);
+		                }else{
+		                    console.log(data.msg);
+		                }
+		            }else{
+						if(data.code == 90001){
+							$("#edit_ad").hide();
+                            $(".mask,#save_ad").show();
+		                	console.log(data.msg);
+		                }
+		                console.log(data.msg);
+		            }
+				},
+			});
+
+		})
+		// 表单验证
+		//var regName=/^$|^[\u4E00-\u9FA5]{1,15}$/;	姓名
+		var regQQ=/^$|^[1-9][0-9]{4,15}$/;	        //qq号码
+		var regWechat=/^$|^[a-zA-Z\d_]{5,20}$/;	//微信号
+		var regTel = /^1(3|4|5|7|8)\d{9}$/; //电话
+		$(".edit input,#edit_ad input,#edit_ad select").blur(function(){
+			var self = $(this);
+			var name = $(this).attr("name");
+			switch(name){
+				// case "qq":
+				// 	if(!regQQ.test(self.val())){
+				// 		onError("*请输入正确的QQ号码",self);
+				// 	}else{
+				// 		onSuccess(self);
+				// 	}
+				// 	break;
+				// case "wechat":
+				// 	if(!regWechat.test(self.val())){
+				// 		onError("*请输入正确的微信号",self);
+				// 	}else{
+				// 		onSuccess(self);
+				// 	}
+				// 	break;
+				case "userName":
+					if(self.val()==""){
+						onError("*请输入姓名",self);
+					}else{
+						onSuccess(self);
+					}
+					break;
+				case "phone":
+					if(self.val()==""){
+						onError("*请输入电话",self);
+					}else if (!regTel.test(self.val())) {
+                        onError('*请填写正确的电话', self);
+					}else{
+						onSuccess(self);
+					}
+					break;
+				case "province":
+					if(self.val()==""){
+						onError("*请选择地址",self);
+					}else{
+						onSuccess(self);
+					}
+					break;
+				case "city":
+					if(self.val()==""){
+						onError("*请选择地址",self);
+					}else{
+						onSuccess(self);
+					}
+					break;
+				case "district":
+					if(self.val()==""){
+						onError("*请选择地址",self);
+					}else{
+						onSuccess(self);
+					}
+					break;
+				case "address":
+					if(self.val()==""){
+						onError("*请填写地址",self);
+					}else if(self.val().length>=80){
+						onError("*不能超过80个汉字",self);
+					}else{
+						onSuccess(self);
+					}
+					break;
+				default:
+					break;
+			}
+		});
+})
+</script>
+</html>

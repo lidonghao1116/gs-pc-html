@@ -1,0 +1,34 @@
+* {
+	border: 0;
+}
+body{
+	 background-color: #ffffff;
+}
+.about_us {
+    height: 320px;
+    width: 100%;
+    background: url(../img/about.png) no-repeat;
+    background-size:auto 320px;
+    background-position:center;
+}
+/* .about_us img {
+width: 100%;
+height: auto;
+margin-bottom:20px ;
+} */
+
+.title_h2{
+	margin-top: 28px;
+	margin-bottom: 28px;
+}
+
+p {
+	width: 100%;
+	line-height: 26px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.foot_box{
+	margin-top: 300px;
+}
+

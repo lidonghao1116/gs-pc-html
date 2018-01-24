@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>家策好服务-门店招聘</title>
+    <link href="css/head-foot.css" rel="stylesheet" type="text/css" />
+    <link href="css/shopjob.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/top.js"></script>
+    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+    <script type="text/javascript" src="js/shopjob.js"></script>
+</head>
+
+<body>
+    <!--头部-->
+    <div class="head_box">
+        <div class="head">
+            <div class="left logo">
+                <a href="jiacerIndex.html" target="_self">
+                    <img src="img/logo0.png" />
+                </a>
+            </div>
+            <div class="left more_s">
+                <select>
+						<option>更多导航</option>
+						<option>更多导航0</option>
+						<option>更多导航1哈</option>
+					</select>
+            </div>
+            <div class="right head_r">
+                <ul>
+                    <li><a href=" " target="_self">登录</a></li>
+                    <li><a href="myReservation.html" target="_self">我的预约</a></li>
+                    <li><a href="myOrder.html" target="_self">我的账户</a></li>
+                    <li class="wechat"><a href="#">官网微信</a>
+                        <div class="wechat_b">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main_content">
+        <p class="position">首页&nbsp;>&nbsp;所有岗位招聘</p>
+        <h2 class="title_h2 title_sp">招聘信息</h2>
+        <div class="choose">
+            <div class="choose_list">
+                <p>工&nbsp;&nbsp;&nbsp;&nbsp;种：</p>
+                <ul class="choose_ul clearfix" id="serviceType">
+                    <!-- <li class="active" data-sercode="">不限</li>
+                    <li data-sercode="01">月嫂</li>
+                    <li data-sercode="02">育儿嫂</li>
+                    <li data-sercode="03">保姆</li>
+                    <li data-sercode="04">老人陪护</li>
+                    <li data-sercode="05">钟点工</li>
+                    <li data-sercode="06">家庭管家</li> -->
+                </ul>
+            </div>
+             <div class="choose_list">
+                <p>薪资要求：</p>
+                <ul id="salaryType" class="choose_ul_sp clearfix">
+                    <li class="active">不限</li>
+                    <li>按月</li>
+                    <li>按天</li>
+                    <li>按小时</li>
+                </ul>
+                <div class="tab_content">
+                    <ul class="choose_ul clearfix" id="salaryMonth">
+                        <!-- <li>按月4000元以下</li>
+                        <li>4000-7000元</li>
+                        <li>7000-10000元</li>
+                        <li>10000-15000元</li>
+                        <li>15000元以上</li> -->
+                    </ul>
+                    <ul class="choose_ul clearfix" id="salaryDay">
+                        <!-- <li>按天400元以下</li>
+                        <li>400-700元</li>
+                        <li>700-1000元</li>
+                        <li>1000-1500元</li>
+                        <li>1500元以上</li> -->
+                    </ul>
+                    <ul class="choose_ul clearfix" id="salaryHour">
+                        <!-- <li>按小时40元以下</li>
+                        <li>40-70元</li>
+                        <li>70-100元</li>
+                        <li>100-150元</li>
+                        <li>150元以上</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="choose_list">
+                <p>年龄要求：</p>
+                <ul class="choose_ul clearfix" id="age">
+                    <!-- <li class="active">不限</li>
+                    <li>29岁以下</li>
+                    <li>29-39岁</li>
+                    <li>39-49岁</li>
+                    <li>50岁以上</li> -->
+                </ul>
+            </div> 
+            <div class="choose_list choose_list_l">
+                <p>服务区域：</p>
+                <ul class="choose_ul clearfix" id="area_sp">
+                    <li class="active" data-code="">不限</li>
+                    <!-- <li data-code="52993">港澳</li>
+                    <li data-code="7">河南</li>
+                    <li data-code="84">钓鱼岛</li>
+                    <li data-code="1">北京</li>
+                    <li data-code="30">宁夏</li>
+                    <li data-code="2">上海</li>
+                    <li data-code="12">江苏</li>
+                    <li data-code="22">四川</li>
+                    <li data-code="13">山东</li>
+                    <li data-code="11">内蒙古</li>
+                    <li data-code="24">贵州</li>
+                    <li data-code="27">陕西</li>
+                    <li data-code="16">福建</li>
+                    <li data-code="3">天津</li>
+                    <li data-code="9">吉林</li>
+                    <li data-code="6">山西</li>
+                    <li data-code="31">新疆</li>
+                    <li data-code="23">海南</li>
+                    <li data-code="28">甘肃</li>
+                    <li data-code="20">广西</li>
+                    <li data-code="18">湖南</li>
+                    <li data-code="8">辽宁</li>
+                    <li data-code="17">湖北</li>
+                    <li data-code="21">江西</li>
+                    <li data-code="25">云南</li>
+                    <li data-code="10">黑龙江</li>
+                    <li data-code="15">浙江</li>
+                    <li data-code="26">西藏</li>
+                    <li data-code="32">台湾</li>
+                    <li data-code="4">重庆</li>
+                    <li data-code="19">广东</li>
+                    <li data-code="5">河北</li>
+                    <li data-code="14">安徽</li>
+                    <li data-code="29">青海</li> -->
+                </ul>
+                <span class="more">更多</span>
+            </div>
+            <!-- <span class="more">更多</span> -->
+        </div>
+        <div class="jobList">
+            <!-- <div class="job_need">
+                <div class="job_top">
+                    <div class="top_left">
+                        <h2>上海客户找高级育婴师<span>急</span></h2>
+                        <ul>
+                            <li>工资范围：<span >899元/月</span></li>
+                            <li>年龄要求：<span >50岁以上</span></li>
+                            <li>服务区域：<span >上海-徐汇区</span></li>
+                            <li>发布机构：<span >天天家政</span></li>
+                        </ul>
+                    </div>
+                    <div class="top_right">
+                        <span class="phone_bg">立即联系</span>
+                        <div class="phone_num" style="display: none;">
+                            <p>联系电话：</p>
+                            <p>021-6666 8889</p>
+                            <img src="img/sanjiao.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="job_bottom">
+                    <p class="demand_tt">岗位要求：</p>
+                    <div class="demand">年龄50岁以下，工资8000以上、服务地址：上海-奉贤区</div>
+                </div>
+            </div> -->
+        </div>
+        <div id="pagination"></div>
+    </div>
+    <!--底部-->
+    <div class="footer_box">
+        <div class="footer">
+            <div class="relative">
+                <div class="partner left">
+                    <h2>合作伙伴</h2>
+                    <div class="logo_img">
+                        <img src="img/nuoya.png" />
+                        <img src="img/fuxing.png" />
+                        <img src="img/tonglian.png" />
+                        <img src="img/zhongxin.png" />
+                    </div>
+                </div>
+                <div class="link left">
+                    <h2>相关链接</h2>
+                    <div class="logo_img">
+                        <a href="http://www.jiacedu.com/" target="_blank"><img src="img/jiacer.png" /></a>
+                    </div>
+                </div>
+                <div class="foot_wechat left">
+                    <h3>微信关注公众号</h3>
+                    <img src="img/wechat0.jpg" />
+                </div>
+            </div>
+            <div class="copyright">
+                <p>上海家策教育科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;上海市徐汇区南丹东路300号亚都商业楼1201室</p>
+                <p>© 2016-2017 家策好服务&nbsp;&nbsp;&nbsp;&nbsp;沪ICP备16022947号-1</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

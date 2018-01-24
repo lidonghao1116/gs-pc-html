@@ -1,0 +1,105 @@
+  *{
+	border: 0;
+  }
+body{
+	background: url(../img/loginbg.png) no-repeat;
+	overflow-x: visible;
+	background-size: 100%;
+	position: static;
+}
+.login{
+	position:absolute;  
+	left: 50%;   
+	top:50%;       
+	margin-top:-202px;
+	margin-left: -265px;
+	width: 530px;
+	height: 300px;
+	border-radius: 6px;
+	padding-top: 105px;
+	background:url(../img/loginlogo.png) no-repeat;
+	background-position: center 20px;
+	background-color: #fafafa;
+}
+.phone_in{
+	
+}
+input{
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+.phone_in input{
+	border: 1px solid #b3b3b3;
+	padding-left: 70px;
+	width: 288px;
+	height: 36px;
+	line-height:36px;
+	background: url(../img/mobile.png) no-repeat;
+	background-position: 20px center;
+}
+.phone_in,.imgCode,.passwd{
+	 position: relative;
+	 width: 360px;
+    margin: 0 auto;
+}
+.imgCode,.passwd{
+	margin-top: 20px;
+}
+.imgCode input,.passwd input{
+	border: 1px solid #b3b3b3;
+	padding-left: 70px;
+	width: 175px;
+	height: 36px;
+	line-height:36px;
+	background: url(../img/imgcode.png) no-repeat;
+	background-position: 17px center;
+	display: block;
+	float: left;
+}
+.imgCode img {
+    width: 98px;
+    height: 38px;
+    margin-left: 15px;
+}
+
+.passwd input{
+	background: url(../img/psd.png) no-repeat;
+	background-position: 18px center;
+}
+.passwd button{
+	background-color: #e6e6e6;
+	margin-left: 15px;
+	width: 98px;
+	height: 38px;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+}
+.btn{
+	margin-top: 60px;
+	margin-bottom: 14px;
+	text-align:center;
+	
+}
+.btn input{
+	width: 360px;
+	height: 39px;
+	background-color: #ff9900;
+	font-size: 18px;
+	color: #ffffff;
+		cursor: pointer;
+}
+.tip{text-align:center;
+	font-size: 12px;
+	color: #808080;
+}
+.tip a{
+	color:#2d3ff2;
+}
+.prompt {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    left: 58px;
+    top: 38px;
+}

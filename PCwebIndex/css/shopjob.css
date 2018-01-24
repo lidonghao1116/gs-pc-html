@@ -1,0 +1,435 @@
+            * {
+                border: 0;
+            }
+            
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            
+            body {
+                padding-bottom: 0;
+                background-color: #ffffff;
+            }
+            
+            .main_content {
+                min-height: 700px;
+            }
+            
+            .title_sp {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .tab_content ul {
+                display: none;
+            }
+            
+            .choose {
+                padding: 0 30px;
+                border: 1px solid #e6e6e6;
+                position: relative;
+            }
+            
+            .choose_sp {
+                height: 80px;
+                overflow: hidden;
+            }
+            
+            .choose_list {
+                overflow: hidden;
+                border-bottom: 1px dashed #e3e3e3;
+            }
+            
+            .choose_list p {
+                width: 70px;
+                float: left;
+                line-height: 14px;
+                text-align: right;
+                padding: 16px 0;
+            }
+            
+            .choose_list ul {
+                padding-left: 70px;
+            }
+            
+            .choose_list ul li {
+                display: block;
+                font-size: 14px;
+                padding: 0 22px;
+                cursor: pointer;
+                line-height: 46px;
+                float: left;
+            }
+            
+            .choose_list ul li.active {
+                color: #ff9900;
+            }
+            
+            .choose_list_l {
+                border-bottom: 0;
+                padding-right: 76px;
+                position: relative;
+                height: 46px;
+            }
+            /* span#more {
+                position: absolute;
+                right: 0;
+                top: 11px;
+                color: #808080;
+                cursor: pointer;
+            }
+            
+            span#more img {
+                margin-right: 5px;
+                vertical-align: middle;
+            } */
+            
+            .more {
+                background: url(../img/jobdown.png) no-repeat;
+                background-position: left center;
+                position: absolute;
+                right: 0;
+                bottom: 14px;
+                padding-left: 23px;
+                background-size: 16px 8px;
+                cursor: pointer;
+            }
+            
+            .more_sp {
+                background: url(../img/jobup.png) no-repeat;
+                background-position: left center;
+                background-size: 16px 8px;
+            }
+            
+            .job {
+                line-height: 29px;
+                vertical-align: middle;
+                padding: 5px 10px;
+                font-family: "微软雅黑";
+            }
+            
+            .job:hover {
+                border: 1px solid #ff9900;
+                color: #ff9900;
+            }
+            
+            .job_need {
+                margin-top: 30px;
+                width: 100%;
+                border: 1px solid #e6e6e6;
+                border-radius: 2px;
+            }
+            
+            .job_top {
+                background-color: #fafafa;
+                border-bottom: 1px solid #e6e6e6;
+                padding: 0 30px;
+                height: 90px;
+            }
+            
+            .top_left {
+                float: left;
+            }
+            
+            .top_left h2 {
+                line-height: 20px;
+                padding: 17px 0;
+                font-size: 16px;
+                display: inline-block;
+            }
+            
+            .top_left h2 span {
+                display: block;
+                width: 20px;
+                height: 20px;
+                color: #fff;
+                background-color: #ff3000;
+                border-radius: 3px;
+                text-align: center;
+                margin-left: 12px;
+                font-weight: normal;
+                font-size: 14px;
+                float: right;
+                margin-top: -2px;
+            }
+            
+            .top_left ul {
+                margin-bottom: 16px;
+                overflow: hidden;
+            }
+            
+            .top_left ul li {
+                float: left;
+                padding: 0 30px;
+                line-height: 18px;
+                border-left: 1px solid #cccccc;
+                color: #6b6b6b;
+            }
+            
+            .top_left ul li span {
+                color: #333333;
+            }
+            
+            .top_left ul li .salary {
+                color: #ff9900;
+            }
+            
+            .top_left ul li .websiteName {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            
+            .top_left ul li:first-child {
+                padding-left: 0;
+                border-left: 0;
+            }
+            
+            .top_right {
+                float: right;
+                margin-top: 28px;
+                position: relative;
+            }
+            
+            .phone_bg {
+                cursor: pointer;
+                display: inline-block;
+                background: url(../img/phonebg.png) no-repeat;
+                background-position: 17px center;
+                line-height: 26px;
+                border: 1px solid #ff9900;
+                border-radius: 16px;
+                padding: 0 15px 0 45px;
+                color: #ff9900;
+            }
+            /* .job_need table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.job_need table tr th {
+	border: 1px solid #e6e6e6;
+	background-color: #fafafa;
+	font-size: 16px;
+	height: 46px;
+	line-height: 46px;
+	font-family: "微软雅黑";
+	padding-left: 40px;
+	    text-align: left;
+}
+
+.job_need table tr th.first {
+	width: 213px;
+}
+
+.job_need table tr th.second {
+	width: 884px;
+	text-align: left;
+	padding-left: 40px;
+}
+
+.job_need table tr td {
+	padding: 8px 42px;
+	border: 1px solid #e6e6e6;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	vertical-align: middle;
+	width: 50%;
+	line-height: 24px;
+}
+.job_need p {
+    color: #333;
+.job_need p span {
+    color: #6b6b6b;
+}
+.job_need p span.salary {
+    color: #ff9900;
+} */
+            
+            .job_bottom {
+                min-height: 62px;
+                padding: 12px 30px;
+                line-height: 24px;
+            }
+            
+            .job_bottom .demand_tt {
+                float: left;
+                font-weight: normal;
+                color: #6b6b6b;
+                font-size: 14px;
+            }
+            
+            .demand_box {
+                padding-left: 70px;
+            }
+            .demand{
+                line-height: 24px;
+                color: #333333;
+                font-size: 14px;
+                max-height: 192px;
+                 overflow: hidden; 
+            }
+            
+            .foot_box {
+                margin-top: 140px;
+            }
+            
+            .position {
+                margin-top: 26px;
+                height: 34px;
+                border-bottom: 1px solid #eee;
+                color: #808080;
+            }
+            
+            .job_tt {
+                float: left;
+                height: 100%;
+            }
+            
+            .job_tt a:hover,
+            .company a:hover {
+                color: #ff9900;
+            }
+            
+            .company {
+                position: relative;
+                float: right;
+                padding-right: 20px;
+            }
+            
+            .company a {
+                color: #666666;
+                font-size: 16px;
+                font-weight: normal;
+                display: block;
+                float: left;
+            }
+            /*             
+            .phone_hover {
+                background: url(../img/phonebg.png) no-repeat;
+                background-position: center 0px;
+            } */
+            
+            .phone_num {
+                display: none;
+                position: absolute;
+                top: 46px;
+                left: 50%;
+                margin-left: -67px;
+                width: 110px;
+                height: 59px;
+                line-height: 26px;
+                padding-top: 15px;
+                background-color: #ff9900;
+                padding: 8px 12px 7px 12px;
+                color: #fff;
+                border-radius: 2px;
+                -moz-box-shadow: 0 0 5px #c5c5c5;
+                -webkit-box-shadow: 0 0 5px #c5c5c5;
+                filter: progid: DXImageTransform.Microsoft.Shadow(color='#c5c5c5', Direction=135, Strength=5);
+                box-shadow: 0 0 5px #c5c5c5;
+            }
+            
+            .phone_num p {
+                color: #fff;
+            }
+            
+            .phone_num img {
+                position: absolute;
+                top: -8px;
+                left: 50%;
+                margin-left: -8px;
+            }
+            
+            .no_found {
+                background: url(../img/nofond.png) no-repeat;
+                height: 90px;
+                padding-top: 90px;
+                background-position: center top;
+                margin-top: 80px;
+                text-align: center;
+            }
+            
+            .no_found h1 {
+                font-size: 24px;
+                color: #7a7a7a;
+                line-height: 56px;
+            }
+            
+            .no_found p {
+                font-size: 18px;
+                color: #7a7a7a;
+            }
+            
+            .footer_box {
+                width: 100%;
+                background-color: #f1f1f1;
+                padding-top: 85px;
+            }
+            
+            .footer {
+                width: 1170px;
+                margin: 0 auto;
+            }
+            
+            .relative {
+                overflow: hidden;
+            }
+            
+            .partner {
+                width: 806px;
+            }
+            
+            .link {
+                width: 250px;
+            }
+            
+            .partner h2,
+            .link h2 {
+                color: #6b6b6b;
+                font-size: 18px;
+                line-height: 34px;
+                margin-bottom: 35px;
+            }
+            
+            .logo_img {
+                height: 80px;
+            }
+            
+            .logo_img img {
+                vertical-align: middle;
+                margin-right: 40px;
+            }
+            
+            .foot_wechat {
+                width: 106px;
+                text-align: center;
+            }
+            
+            .foot_wechat h3 {
+                text-align: center;
+                line-height: 20px;
+                margin-bottom: 16px;
+            }
+            
+            .foot_wechat img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .copyright {
+                margin-top: 56px;
+                border-top: 1px solid #d9d9d9;
+                padding: 24px 0 40px;
+            }
+            
+            .copyright p {
+                font-size: 12px;
+                line-height: 26px;
+                text-align: center;
+                color: #808080;
+            }

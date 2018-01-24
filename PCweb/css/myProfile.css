@@ -1,0 +1,113 @@
+body{
+	background-color:#f5f5f5;
+  }
+.main_content {
+	background-color: #FFFFFF;
+	margin-top: 35px;
+	margin-bottom: 80px;
+	min-height:450px
+}
+.pro_file_meg{
+	width: auto;
+	height: auto;
+	padding-top: 23px;
+	border-bottom: 1px solid #f5f5f5;
+}
+.title_h2 {
+	margin-left: 20px;
+}
+.pro_file {
+	font-size: 16px;
+	display: block;
+	margin: 23px 50px;
+	
+}
+.write {
+		display: block;
+		color: #ff9900;
+		font-size: 16px;
+		cursor: pointer;
+		background: url(../img/write.png) no-repeat;
+		float: right;
+		margin-right: 20px;
+		padding-left: 24px;
+		line-height: 24px;
+		background-position: left center;
+}
+.person_file{
+	padding-top: 23px;
+		font-size: 16px;
+}
+.person_file table {
+	margin-top: 15px;
+}
+.person_file table tr td {
+    padding: 10px 5px;
+    line-height: 28px;
+}
+.person_file_name {
+	width: 100px;
+	text-align: right;
+	vertical-align: top;
+}
+
+.person_file_cont {
+	width: 450px;
+}
+.pro_btn {
+	text-align:center;
+    padding: 30px 0 50px;
+	height:32px;
+}
+.pro_btn input{
+	display:none;
+	width: 84px;
+    height: 32px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+	cursor:pointer;
+}
+.pro_btn_res {
+	background-color: #cccccc;
+}
+
+.pro_btn_sub {
+	margin-left: 20px;
+	background-color: #ff9900;
+}
+
+.pro_file_int {
+	display: none;
+}
+.person_file select{
+	border: 1px solid #b3b3b3;
+	height: 26px;
+	padding:0 0 0 8px;
+	font-size: 14px;
+	
+}
+.person_file_area input{
+	width: 412px;
+}
+.person_file input.address{
+	margin-top:16px;
+	width:430px;
+}
+.edit{
+	line-height: 0;
+	display:none;
+}
+.person_file input{
+	border: 1px solid #b3b3b3;
+	height: 26px;
+	width:140px;
+	padding:0 8px;
+	line-height: 26px;
+}
+.validation{
+	color:red;
+	font-size:14px;
+	line-height: 28px;
+}

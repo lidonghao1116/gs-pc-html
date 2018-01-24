@@ -1,0 +1,235 @@
+/* CSS Document */
+
+.banner{
+width:100%;
+margin:0 auto;
+}
+.banner img{
+	width:100%;
+	height:auto;
+}
+.pro{
+	width:1150px;
+	margin: 45px auto 0;
+}
+.pro_tt{
+	font-size:20px;
+	text-align:center;
+	line-height:28px;
+}
+.pro_ttf{
+	color:#4c4c4c;
+	font-size:14px;
+	line-height:24px;
+	text-align:center;
+	margin-top:12px;
+}
+.pro_list {
+    overflow: hidden;
+	margin-top:40px;
+}
+.pro_list li {
+	cursor:pointer;
+	position:relative;
+	width:350px;
+	height: 360px;
+    background-color: #fff;
+    margin-left: 25px;
+    margin-bottom: 48px;
+    float: left;
+}
+.pro_list li.waiting{
+	background-color:#ebebeb;
+}
+.pro_list li.waiting h5{
+	font-size:24px;
+	color:#fff;
+	text-align:center;
+	line-height:30px;
+	margin-top:165px;
+	font-weight:normal;
+}
+.pro_img{
+	width:350px;
+	height:274px;
+	line-height:0;
+}
+.img_mask{
+	display:none;
+	z-index:1;
+	width:350px;
+	height:274px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	background-color:rgba(0,0,0,.3);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4c000000,endColorstr=#4c000000);
+}
+.hot{
+	z-index:2;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.pro_detail {
+    padding-top: 18px;
+}
+.pro_detail h3 {
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 17px;
+}
+.pro_detail h4 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #ff681e;
+    text-align: right;
+}
+.pro_detail h4 span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+.pro_list li p {
+    color: #808080;
+    font-size: 16px;
+    padding-left: 17px;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.progress_box{
+	background-color:#fff;
+	margin-top: 22px;
+}
+.progress{
+	text-align:center;
+	width:1100px;
+	margin:0 auto;
+	padding: 50px 0 100px 0;
+}
+.progress img{
+    margin-top: 75px;
+}
+.gold{
+	width:1100px;
+	margin:50px auto 65px;
+	
+}
+.gold_list {
+    margin-top: 45px;
+    overflow: hidden;
+}
+.gold_list0 {
+    margin-right: 25px;
+}
+.gold_list_li {
+    float: left;
+    width: 537px;
+    height: 314px;
+    background-color: #fff;
+	cursor: pointer;
+}
+.gold_list_l {
+    padding-top: 60px;
+    width: 168px;
+    overflow: hidden;
+	    padding-left: 20px;
+}
+.gold_list_l img{
+	width:168px;
+	height:200px;
+}
+.gold_list_r {
+    padding-top: 65px;
+    width: 316px;
+}
+.right_top {
+    font-size: 20px;
+}
+.right_top span{
+	 font-weight: normal;
+}
+.service {
+    display: inline-block;
+    font-size: 12px;
+    color: #ff681e;
+    border: 1px solid #ff681e;
+    border-radius: 12px;
+    padding: 0 8px;
+    margin-left: 5px;
+    line-height: 16px;
+}
+.per_info {
+    font-size: 14px;
+    margin-left: 30px;
+}
+.gold_list_r p {
+    font-size: 18px;
+    padding-left: 33px;
+    line-height: 22px;
+	background:url(../img/jinpai.png) no-repeat;
+	background-position:left center;
+	margin-top: 50px;
+}
+.per_info_list {
+    overflow: hidden;
+    margin-top: 30px;
+}
+.per_info_list li {
+    float: left;
+    line-height: 24px;
+    border: 1px solid #e9e9e9;
+    font-size: 14px;
+    border-radius: 12px;
+    padding: 0 9px;
+    margin-right: 17px;
+}
+.per_ab_list {
+    overflow: hidden;
+    margin-top: 14px;
+}
+.per_ab_list li {
+    font-size: 14px;
+    color: #4c4c4c;
+    float: left;
+    line-height: 26px;
+    padding: 0 9px;
+    background-color: #e8e8e8;
+    margin-right: 15px;
+}
+.left_menu {
+    position: absolute;
+	background:url(../img/border.png) no-repeat;
+	background-position:right center;
+	left: 50%;
+    top: 652px;
+    z-index: 3;
+    margin-left: -672px;
+}
+@media screen and (max-width:1366px){
+.left_menu {
+    margin-left: -666px;
+}
+}
+.left_menu_sp{
+	position:fixed;
+	top:50%;
+	margin-top:-48px;
+}
+.left_menu p {
+	cursor: pointer;
+	padding-right:26px;
+	margin-right:-6px;
+    line-height: 32px;
+    font-size: 16px;
+    color: #808080;
+    text-align: right;
+	background:url(../img/menu_bg.png) no-repeat;
+	background-position:right 8px;
+}
+
+.left_menu p.active{
+	color:#ff9900;
+	background-position: right -54px;
+}

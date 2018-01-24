@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+
+  <link href="css/head-foot.css" rel="stylesheet" type="text/css"/>
+  <link href="css/jiacerIndex.css" rel="stylesheet" type="text/css"/>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/jiacerIndex.js"></script>
+  <script type="text/javascript" src="js/top.js"></script>
+  <title>家策好服务-家庭有托付！</title>
+</head>
+<body>
+<!--头部-->
+<div class="fix_head">
+  <div class="head_content">
+    <a href="jiacerIndex.html" target="_self"><img class="jiacerlogo" src="img/shouyelogo.png"/></a>
+    <ul>
+      <li>找服务</li>
+      <li>找工作</li>
+      <li>了解家策</li>
+      <li>商户入驻</li>
+    </ul>
+    <div class="registered">
+      <!-- 未登录 -->
+      <a class="out">登录</a>
+      <a class="out">注册</a>
+      <!-- <a class="active login" href="login.html">注册</a>-->
+      <!-- 登录 -->
+      <!-- <a class="out" href="#">个人中心</a>
+      <a class="out" href="#">退出</a> -->
+    </div>
+  </div>
+</div>
+<!--主要内容-->
+<div class="banner">
+  <img src="img/shouyebanner.png"/>
+</div>
+<div class="company index_li">
+  <h1 class="com_title">寻找附近的家政公司</h1>
+  <div class="inquire">
+    <h3 class="place">地区</h3>
+    <div class="inquire_b">
+      <div class="city sel_box">
+        <h3 class="city_in sel">上海</h3>
+        <div class="hot_city sel_con">
+          <p>热门城市</p>
+          <ul>
+            <li privince-code="2">上海</li>
+          </ul>
+        </div>
+      </div>
+      <div class="area sel_box">
+        <h3 class="area_in sel">所有区域</h3>
+        <div class="hot_area sel_con">
+          <p>热门区域</p>
+          <ul>
+            <li area-code="">所有区域</li>
+            <li area-code="78">黄浦区</li>
+            <li area-code="2813">徐汇区</li>
+            <li area-code="2815">长宁区</li>
+            <li area-code="2817">静安区</li>
+            <li area-code="2841">普陀区</li>
+            <li area-code="2820">闸北区</li>
+            <li area-code="2822">虹口区</li>
+            <li area-code="2823">杨浦区</li>
+            <li area-code="2830">浦东新区</li>
+            <li area-code="2825">闵行区</li>
+            <li area-code="2824">宝山区</li>
+            <li area-code="2826">嘉定区</li>
+            <li area-code="2835">金山区</li>
+            <li area-code="2834">松江区</li>
+            <li area-code="2833">青浦区</li>
+            <li area-code="2837">奉贤区</li>
+            <li area-code="2919">崇明县</li>
+            <!--
+            黄浦区
+            徐汇区
+            长宁区
+            静安区
+            普陀区
+            闸北区
+            虹口区
+            杨浦区
+            浦东新区
+            闵行区
+            宝山区
+            嘉定区
+            金山区
+            松江区
+            青浦区
+            奉贤区
+            崇明县 -->
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="town sel_box">
+        <h3 class="town_in sel">所有镇</h3>
+        <div class="hot_town sel_con">
+          <p>热门区域</p>
+          <ul>
+            <li>张江镇</li>
+            <li>张江镇1</li>
+            <li>黄埔镇</li>
+          </ul>
+        </div>
+      </div> -->
+      <input class="inquire_bt" onClick="window.location=('shopList.html?')" type="button"/>
+    </div>
+  </div>
+  <div class="tab_content">
+    <div class="tab_list" style="display:block;">
+      <ul>
+
+      </ul>
+    </div>
+  </div>
+  <div class="tab_box">
+    <ul class="tab">
+    </ul>
+    <a class="more" href="shopList.html?more=01">查看更多</a>
+  </div>
+</div>
+<div class="new_business index_li">
+  <div class="business">
+    <h1 class="com_title">最新业务</h1>
+    <div class="business_box" id="business_box">
+      <div class="ul_box">
+        <ul>
+          <!--<li class="buss_list">
+            <a href="shopjob.html"><span class="first">[天天家政1]</span><span class="second">上海客户找金牌月嫂</span>上海市-徐汇区   要求：辅食，早教，年龄小于50，会普通话，性格开朗，育儿经验</a>
+            <p><span>8999-12999/月</span>2017-03-08</p>
+          </li>
+          <li class="buss_list">
+            <a href="shopjob.html"><span class="first">[天天家政2]</span><span class="second">上海客户找金牌月嫂</span>上海市-徐汇区   要求：辅食，早教，年龄小于50，会普通话，性格开朗，育儿经验</a>
+            <p><span>8999-12999/月</span>2017-03-08</p>
+          </li>
+          <li class="buss_list">
+            <a href="shopjob.html"><span class="first">[天天家政3]</span><span class="second">上海客户找金牌月嫂</span>上海市-徐汇区   要求：辅食，早教，年龄小于50，会普通话，性格开朗，育儿经验</a>
+            <p><span>8999-12999/月</span>2017-03-08</p>
+          </li>
+          <li class="buss_list">
+            <a href="shopjob.html"><span class="first">[天天家政4]</span><span class="second">上海客户找金牌月嫂</span>上海市-徐汇区   要求：辅食，早教，年龄小于50，会普通话，性格开朗，育儿经验</a>
+            <p><span>8999-12999/月</span>2017-03-08</p>
+          </li>
+          <li class="buss_list">
+            <a href="shopjob.html"><span class="first">[天天家政5]</span><span class="second">上海客户找金牌月嫂</span>上海市-徐汇区   要求：辅食，早教，年龄小于50，会普通话，性格开朗，育儿经验</a>
+            <p><span>8999-12999/月</span>2017-03-08</p>
+          </li>
+          <li class="buss_list">
+            <a href="shopjob.html"><span class="first">[天天家政6]</span><span class="second">上海客户找金牌月嫂</span>上海市-徐汇区   要求：辅食，早教，年龄小于50，会普通话，性格开朗，育儿经验</a>
+            <p><span>8999-12999/月</span>2017-03-08</p>
+          </li>
+          <li class="buss_list">
+            <a href="shopjob.html"><span class="first">[天天家政7]</span><span class="second">上海客户找金牌月嫂</span>上海市-徐汇区   要求：辅食，早教，年龄小于50，会普通话，性格开朗，育儿经验</a>
+            <p><span>8999-12999/月</span>2017-03-08</p>
+          </li>-->
+        </ul>
+      </div>
+    </div>
+    <div class="more_job"><a class="more" href="shopjob.html?showMore=01">查看更多</a></div>
+  </div>
+</div>
+<div class="why index_li">
+  <h1 class="com_title">为什么选择家策</h1>
+  <ul>
+    <li class="first">
+      <div class="why_lis">
+        <h3>机构技能认证</h3>
+        <p>人力资源和社会保障部门颁发证书，专业技能有保障。</p>
+      </div>
+    </li>
+    <li class="second">
+      <div class="why_lis">
+        <h3>家政保险保障</h3>
+        <p>与复兴联合健康险、诺亚财富荣耀保险等官方合作。</p>
+      </div>
+    </li>
+    <li class="third">
+      <div class="why_lis">
+        <h3>服务自由定制</h3>
+        <p>自由定制您的服务，我们将为您挑选最适合的家政员。</p>
+      </div>
+    </li>
+    <li class="four">
+      <div class="why_lis">
+        <h3>家策健康学院</h3>
+        <p>家策健康学院致力于提升行业素养，培养专业的家政员。</p>
+      </div>
+    </li>
+  </ul>
+  <div class="more_job"><a class="more" href="aboutUs.html">了解家策</a></div>
+</div>
+<!--底部-->
+<div class="footer_box index_li">
+  <div class="gs-settled">
+    <div class="ctnMiddle">
+      <h1>加入家策好服务</h1>
+      <div class="showBox" id="showContainer">
+        <div class="showItem">
+          <dl>
+            <dt><img src="img/settled/wshop.png" alt=""></dt>
+            <dd>
+              <h4>专属微店</h4>
+            </dd>
+            <dd>
+              <p class="text">个性服务，营销利器</p>
+            </dd>
+          </dl>
+        </div>
+        <div class="showItem">
+          <dl>
+            <dt><img src="img/settled/payment.png" alt=""></dt>
+            <dd>
+              <h4>在线收银</h4>
+            </dd>
+            <dd>
+              <p class="text">用户在商家网站上完成支付</p>
+            </dd>
+          </dl>
+        </div>
+        <div class="showItem">
+          <dl>
+            <dt><img src="img/settled/management.png" alt=""></dt>
+            <dd>
+              <h4>综合管理</h4>
+            </dd>
+            <dd>
+              <p class="text">集成各类信息化管理工具</p>
+            </dd>
+          </dl>
+        </div>
+        <div class="showItem">
+          <dl>
+            <dt><img src="img/settled/business.png" alt=""></dt>
+            <dd>
+              <h4>业务互动</h4>
+            </dd>
+            <dd>
+              <p class="text">3重机制，保障业务合作更安全高效</p>
+            </dd>
+          </dl>
+        </div>
+        <div class="showItem">
+          <dl>
+            <dt><img src="img/settled/point.png" alt=""></dt>
+            <dd>
+              <h4>赢得口碑</h4>
+            </dd>
+            <dd>
+              <p class="text">规范经营、粘性用户更好体验</p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="shang"><a href="rzh.html" target="_blank">商户入驻</a></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="relative">
+      <div class="partner left">
+        <h2>合作伙伴</h2>
+        <div class="logo_img">
+          <img src="img/nuoya.png"/>
+          <img src="img/fuxing.png"/>
+          <img src="img/tonglian.png"/>
+          <img src="img/zhongxin.png"/>
+        </div>
+      </div>
+      <div class="link left">
+        <h2>相关链接</h2>
+        <div class="logo_img">
+          <a href="http://www.jiacedu.com/" target="_blank"><img src="img/jiacer.png"/></a>
+        </div>
+      </div>
+      <div class="foot_wechat left">
+        <h3>微信关注公众号</h3>
+        <img src="img/wechat0.jpg"/>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>上海家策教育科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;上海市徐汇区南丹东路300号亚都商务楼1201室</p>
+      <p>© 2016-2017 家策好服务&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn"
+                                                     target="_blank">沪ICP备16022947号-1</a></p>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+</script>
+</html>

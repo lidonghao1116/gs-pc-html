@@ -1,0 +1,353 @@
+body{
+	background-color:#fff;
+	padding-bottom:0;
+}
+
+.head {
+    width: 900px;
+    height: 88px;
+    margin: 0 auto;
+}
+/* .head_content {
+    width:900px;
+    margin: 0 auto;
+}
+.jiacerlogo {
+    margin-top: 13px;
+	float:left;
+	width: 189px;
+    height: 54px;
+}
+.registered {
+   padding-top: 20px;
+    float: right;
+    height: 50px;
+}
+.registered .login {
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    color: #5f5f5f;
+	font-size: 16px;
+    margin-left: 16px;
+    display: inline-block;
+    line-height: 40px;
+    border: 1px solid #eeeeee;
+	border-radius:2px;
+}
+.registered a.active{
+	color:#fff;
+	background-color:#ff9900;
+}
+.registered .login:hover{
+	color:#fff;
+	background-color:#ffb13b;
+	border:1px solid #e7e7e7;
+}
+.registered .login:active{
+	background-color:#f19100;
+	color:#fff;
+	border-radius:4px;
+}
+a.out {
+    color: #808080;
+    font-size: 14px;
+    margin-left: 50px;
+    margin-top: 10px;
+    display: inline-block;
+} */
+.list_content{
+	width:900px;
+	margin:0 auto;
+	min-height: 700px;
+}
+.position{
+	margin-top:26px;
+	height:34px;
+	border-bottom:1px solid #eee;
+	color:#808080;
+	font-size:14px;	
+}
+.inquire {
+	height:102px;
+	padding:23px 0 0;
+    border-bottom: 1px solid #eeeeee;
+}
+h3.place {
+    padding-left: 30px;
+	margin-bottom:5px;
+	font-size:16px;
+	line-height:26px;
+    color: #5f5f5f;
+    background: url(../img/didian.png) no-repeat;
+	background-position:left center;
+}
+.inquire_b{
+	position: relative;
+}
+.city{
+	 width: 150px;
+	margin-right: 6px;
+}
+.area{
+	width:319px;
+	margin-right:8px;
+}
+.sel_box {
+	float:left;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #fff;
+	border: 2px solid #f5f5f5;
+	margin-right: 6px;
+}
+
+.city_active{
+	 border: 2px solid #fdb74d;
+	-moz-box-shadow:0 0 4px #ff9900;
+	-webkit-box-shadow:0 0 4px #ff9900;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#ff9900', Direction=135, Strength=4);
+	box-shadow:0 0 4px #ff9900;
+}
+h3.sel {
+    padding: 15px 0 15px 20px;
+	cursor:pointer;
+    font-size: 18px;
+    color: #7a7a7a;
+	line-height: 20px;
+}
+
+.sel_box:hover{
+	 border: 2px solid #fdb74d;
+	-moz-box-shadow:0 0 4px #ff9900;
+	-webkit-box-shadow:0 0 4px #ff9900;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#ff9900', Direction=135, Strength=4);
+	box-shadow:0 0 4px #ff9900;
+}
+.sel_con{
+	z-index:2;
+	display:none;
+    width: 457px;
+    border-radius: 4px;
+    padding: 15px 6px 10px 18px;
+    background-color: #fff;
+	-moz-box-shadow:0 0 6px #b7b7b7;
+	-webkit-box-shadow:0 0 6px #b7b7b7;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#b7b7b7', Direction=135, Strength=6);
+	box-shadow:0 0 6px #b7b7b7;
+	position: absolute;
+}
+.sel_con{
+	top: 60px;
+    left:0;
+}
+.sel_con p{
+    font-size: 14px;
+    color: #6e6e6e;
+    padding-left: 10px;
+    line-height: 24px;
+	margin-bottom:11px;
+}
+.sel_con ul li {
+	cursor:pointer;
+    padding: 0 11px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    float: left;
+    margin-right: 12px;
+    font-size: 14px;
+    color: #6e6e6e;
+    margin-bottom: 7px;
+}
+.inquire_bt {
+    float: left;
+    width: 92px;
+    height: 50px;
+    border: 0;
+  color:#fff;
+    margin-top: 2px;
+  border-radius:2px;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:bold;
+  background:url(../img/search.png) no-repeat;
+  background-position:center center;
+   background-color: #ff9900;
+}
+.inquire_bt:hover{
+	background-color:#ffb13b;
+	border:1px solid #e7e7e7;
+}
+.inquire_bt:active{
+	background-color:#f19100;
+	border-radius:4px;
+}
+.sel_con ul li:hover{
+	 background-color: #ffe5bf;
+}
+.tab_list {
+	width:936px;
+    padding-top: 16px;
+    overflow: hidden;
+	margin-left:-18px;
+	
+}
+.tab_list ul li {
+	 background-color: #f5f5f5;
+	cursor:pointer;
+    width: 440px;
+    height: 150px;
+    border-radius: 2px;
+    float: left;
+    margin-left: 18px;
+    border: 1px solid #e5e5e5;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+.tab_list ul li:hover{
+	-moz-box-shadow:0 0 6px #b7b7b7;
+	-webkit-box-shadow:0 0 6px #b7b7b7;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#b7b7b7', Direction=135, Strength=6);
+	box-shadow:0 0 6px #b7b7b7;
+}
+.com_top {
+    padding-left: 15px;
+    padding-top: 17px;
+	overflow: hidden;
+	background-color:#fff;
+	    height: 73px;
+}
+.com_top img {
+    float: left;
+    width: 54px;
+    height: 54px;
+}
+.top_right {
+    width:360px;
+    margin-left: 9px;
+    float: left;
+}
+.top_right h2 {
+    color: #3d3d3d;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+}
+.top_right p{
+	background:url(../img/mendidian.png) no-repeat;
+	background-position:left center;
+	    padding-left: 18px;
+    line-height: 28px;
+}
+.type {
+    height: 60px;
+}
+.type p {
+    padding: 20px 3px 20px 15px;
+    color: #525252;
+    font-size: 14px;
+    line-height: 20px;
+}
+.type p span {
+    margin-right: 12px;
+}
+.j_page{
+	text-align:center;
+	margin:38px 0 63px
+}
+.j_page ul{
+	text-align:center;
+}
+.j_page ul li{
+	cursor:pointer;
+	display:inline-block;
+	margin-left:9px;
+	padding:0 15px;
+	height:36px;
+	line-height:36px;
+	color:#ff9900;
+	border:1px solid #eeeeee;
+}
+.j_page ul li.disable{
+	color:#999;
+}
+.j_page ul li.active{
+	background-color:#ff9900;
+	color:#fff;
+	border:1px solid #ff9900;
+}
+.no_found {
+    background: url(../img/nofond.png) no-repeat;
+    height: 90px;
+    padding-left: 140px;
+    background-position: 20px center;
+	margin-top:40px;
+}
+.no_found h1 {
+    font-size: 24px;
+    color: #7a7a7a;
+    line-height: 56px;
+}
+.no_found p {
+    font-size: 18px;
+    color: #7a7a7a;
+}
+/* 底部 */
+.footer_box {
+	width:100%;
+    background-color: #f1f1f1;
+	padding-top:85px;
+}
+.footer {
+    width: 1170px;
+    margin: 0 auto;
+}
+.relative {
+    overflow: hidden;
+}
+.partner {
+    width: 806px;
+}
+.link {
+    width: 250px;
+}
+.partner h2, .link h2{
+	color:#6b6b6b;
+	font-size:18px;
+	line-height: 34px;
+	margin-bottom:35px;
+}
+.logo_img {
+    height: 80px;
+}
+.logo_img img {
+    vertical-align: middle;
+    margin-right: 40px;
+}
+.foot_wechat {
+    width: 104px;
+    text-align: center;
+}
+.foot_wechat h3 {
+    font-size: 14px;
+    color: #808080;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+.foot_wechat img {
+    width: 100px;
+    height: 100px;
+}
+.copyright {
+    margin-top: 56px;
+    border-top: 1px solid #d9d9d9;
+    padding: 24px 0 40px;
+}
+.copyright p {
+    font-size: 12px;
+    line-height: 26px;
+    text-align: center;
+    color: #808080;
+}

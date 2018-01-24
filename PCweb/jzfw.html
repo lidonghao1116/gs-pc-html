@@ -1,0 +1,877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/head-foot.css" rel="stylesheet" type="text/css" />
+<link href="css/jzfw.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/top.js"></script>
+<script type="text/javascript" src="js/jzfw.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
+<title>家政服务</title>
+</head>
+<body>
+	<!--头部-->
+	<div class="head_box">
+		<div class="head">
+			<div class="left logo">
+				<a href="index.html" target="_self">
+					<img src="img/logo0.png"/>
+				</a>
+			</div>
+			<div class="left more_s">
+				<select>
+					<option>更多导航</option>
+					<option>更多导航0</option>
+					<option>更多导航1哈</option>
+				</select>
+			</div>
+			<div class="right head_r">
+				<ul> 
+					<li><a href="login.html" target="_self">登录</a></li>
+					<li><a href="myOrder.html" target="_self">我的订单</a></li>
+					<li><a href="myProfile.html" target="_self">我的账户</a></li>
+					<li class="wechat"><a href="#">官网微信</a>
+						<div class="wechat_b">
+						</div>
+					</li>
+				</ul>
+				<div class="my_res">
+					<span><a href="myReservation.html" target="_self">我的预约>></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="top_com_box">
+		<div class="top_com">
+		<div class="first_word">家</div>
+			<div class="top_com_l">
+				<h1>家策家政（徐汇店）</h1>
+				<p>上海市徐汇区凯旋路3500号华苑大厦1座19楼A室</p>
+			</div>
+			<div class="top_com_r">
+				<div class="phone">021-6666&nbsp;&nbsp;8888</div>
+				<div class="nav">
+					<ul>
+						<li><a href="index.html" target="_self">首页</a></li>
+						<li class="active"><a href="jzfw.html" target="_self">家政服务</a></li>
+						<li><a href="serviceCustomize.html" target="_self">服务定制</a></li>
+						<li><a href="train.html" target="_self">专业培训</a></li>
+						<li><a href="job.html" target="_self">岗位招聘</a></li>
+						<li><a href="about_us.html" target="_self">关于我们</a></li>
+					<ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--主要内容-->
+	<div class="top_box">
+		<div class="main_content">
+			<h2 class="title_h2">服务工种</h2>
+			<div class="menu">
+				<div class="menu_left left">
+					<ul>
+						<li class="active">月嫂</li>
+						<li>育婴师</li>
+						<li>保姆</li>
+						<li>养老陪护</li>
+						<li>钟点工</li>
+						<li>家庭管家</li>
+					</ul>
+				</div>
+				<div class="menu_right left">
+					<div class="menu_rtop">
+						<ul>
+							<li><span>服务对象：</span><p id="object">家庭</p></li>
+							<li><span>服务内容：</span><p id="content">日常家庭清洁、洗涤熨烫、家常菜、面食、果盘、粥品、营养早餐、婴儿辅食小儿护理、照顾老人</p></li>
+						</ul>
+					</div>
+					<div class="menu_runder">
+						<div class="select_list">
+							<div class="select_label">价格：</div>
+							<div class="select_r">
+								<ul class="list3">
+									<li class="active" data-salary="">不限</li>
+								</ul>
+							</div>
+						</div>
+						<div class="select_list">
+							<div class="select_label">经验：</div>
+							<div class="select_r">
+								<ul class="list1">
+									<li class="active" data-experience="">不限</li>
+								</ul>
+							</div>
+						</div>
+						<div class="select_list">
+							<div class="select_label">年龄：</div>
+							<div class="select_r">
+								<ul class="list2">
+									<li class="active" data-age="">不限</li>
+								</ul>
+							</div>
+						</div>
+						<div class="select_list hide_li" style="display:none;">
+							<div class="select_label">属相：</div>
+							<div class="select_r">
+								<ul class="zodiac">
+									<li class="active" data-zodiac="">不限</li>
+								</ul>
+							</div>
+						</div>
+						<div class="select_list hide_li" style="display:none;">
+							<div class="select_label">学历：</div>
+							<div class="select_r">
+								<ul class="education">
+									<li class="active" data-education="">不限</li>
+								</ul>
+							</div>
+						</div>
+						<div class="select_list hide_li" style="display:none;">
+							<div class="select_label">籍贯：</div>
+							<div class="select_r">
+								<ul class="nativePlace">
+									<li class="active" data-nativePlace="">不限</li>
+								</ul>
+							</div>
+						</div>
+						<!-- <div class="select_list guanjia yanglao common" style="display:none;">
+							<div class="select_label">性别：</div>
+							<div class="select_r">
+								<ul>
+									<li class="active">不限</li>
+									<li>男</li>
+									<li>女</li>
+								</ul>
+							</div>
+						</div>
+						<div class="select_list yanglao baomu common" style="display:none;">
+							<div class="select_label">服务类型：</div>
+							<div class="select_r">
+								<ul>
+									<li class="active">不限</li>
+									<li>住家</li>
+									<li>不住家</li>
+								</ul>
+							</div>
+						</div>
+						<div class="select_list zhongdian common" style="display:none;">
+							<div class="select_label">服务类型：</div>
+							<div class="select_r">
+								<ul>
+									<li class="active">不限</li>
+									<li>临时</li>
+									<li>长期</li>
+								</ul>
+							</div>
+						</div>
+						<div class="select_list yuesao yuying guanjia common" style="display:none;">
+							<div class="select_label">服务类型：</div>
+							<div class="select_r">
+								<ul>
+									<li class="active">住家</li>
+								</ul>
+							</div>
+						</div> -->
+						<div class="sex addCon">
+						</div> 
+						<div class="serType addCon">
+						</div>
+						<div class="up"><span>展开</span><img src="img/up.png"/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="topradio main_content">
+			服务状态
+			<input id="all" type="radio" checked="checked" name="status" value=""/><label for="all">全部</label>
+			<input id="todo" type="radio" name="status" value="02"/><label for="todo">待聘</label>
+			<input id="ing" type="radio" name="status" value="01"/><label for="ing">服务中</label>
+	</div>
+	<div class="per_content">
+		<div class="per_list">
+			<ul id="staffList">
+				<li>
+					<a href="jzfwxq.html" target="_blank">
+						<div class="card">
+							<div class="gold_list_l left">
+								<img src="img/photo.png"/>
+							</div>
+							<div class="gold_list_r left">
+								<h1 class="right_top">张春梅<span class="service">服务中</span><span class="per_info">30岁/属羊/上海人</span></h1>
+								<p>月嫂</p>
+								<ul class="per_info_list">
+									<li>本科学历</li>
+									<li>双鱼座</li>
+									<li>从业三年</li>
+								</ul>
+								<h3>12888<span>元/26天</span></h3>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="jzfwxq.html" target="_blank">
+						<div class="card">
+							<div class="gold_list_l left">
+								<img src="img/photo.png"/>
+							</div>
+							<div class="gold_list_r left">
+								<h1 class="right_top">张春梅<span class="service noservice">待聘</span><span class="per_info">30岁/属羊/上海人</span></h1>
+								<p>月嫂</p>
+								<ul class="per_info_list">
+									<li>本科学历</li>
+									<li>双鱼座</li>
+									<li>从业三年</li>
+								</ul>
+								<h3>12888<span>元/26天</span></h3>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="jzfwxq.html" target="_blank">
+						<div class="card">
+							<div class="gold_list_l left">
+								<img src="img/photo.png"/>
+							</div>
+							<div class="gold_list_r left">
+								<h1 class="right_top">张春梅<span class="service noservice">待聘</span><span class="per_info">30岁/属羊/上海人</span></h1>
+								<p>月嫂</p>
+								<ul class="per_info_list">
+									<li>本科学历</li>
+									<li>双鱼座</li>
+									<li>从业三年</li>
+								</ul>
+								<h3>12888<span>元/26天</span></h3>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="jzfwxq.html" target="_blank">
+						<div class="card">
+							<div class="gold_list_l left">
+								<img src="img/photo.png"/>
+							</div>
+							<div class="gold_list_r left">
+								<h1 class="right_top">张春梅<span class="service noservice">待聘</span><span class="per_info">30岁/属羊/上海人</span></h1>
+								<p>月嫂</p>
+								<ul class="per_info_list">
+									<li>本科学历</li>
+									<li>双鱼座</li>
+									<li>从业三年</li>
+								</ul>
+								<h3>12888<span>元/26天</span></h3>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="jzfwxq.html" target="_blank">
+						<div class="card">
+							<div class="gold_list_l left">
+								<img src="img/photo.png"/>
+							</div>
+							<div class="gold_list_r left">
+								<h1 class="right_top">张春梅<span class="service">服务中</span><span class="per_info">30岁/属羊/上海人</span></h1>
+								<p>月嫂</p>
+								<ul class="per_info_list">
+									<li>本科学历</li>
+									<li>双鱼座</li>
+									<li>从业三年</li>
+								</ul>
+								<h3>12888<span>元/26天</span></h3>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="jzfwxq.html" target="_blank">
+						<div class="card">
+							<div class="gold_list_l left">
+								<img src="img/photo.png"/>
+							</div>
+							<div class="gold_list_r left">
+								<h1 class="right_top">张春梅<span class="service">服务中</span><span class="per_info">30岁/属羊/上海人</span></h1>
+								<p>月嫂</p>
+								<ul class="per_info_list">
+									<li>本科学历</li>
+									<li>双鱼座</li>
+									<li>从业三年</li>
+								</ul>
+								<h3>12888<span>元/26天</span></h3>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="jzfwxq.html" target="_blank">
+						<div class="card">
+							<div class="gold_list_l left">
+								<img src="img/photo.png"/>
+							</div>
+							<div class="gold_list_r left">
+								<h1 class="right_top">张春梅<span class="service">服务中</span><span class="per_info">30岁/属羊/上海人</span></h1>
+								<p>月嫂</p>
+								<ul class="per_info_list">
+									<li>本科学历</li>
+									<li>双鱼座</li>
+									<li>从业三年</li>
+								</ul>
+								<h3>12888<span>元/26天</span></h3>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="jzfwxq.html" target="_blank">
+						<div class="card">
+							<div class="gold_list_l left">
+								<img src="img/photo.png"/>
+							</div>
+							<div class="gold_list_r left">
+								<h1 class="right_top">张春梅<span class="service">服务中</span><span class="per_info">30岁/属羊/上海人</span></h1>
+								<p>月嫂</p>
+								<ul class="per_info_list">
+									<li>本科学历</li>
+									<li>双鱼座</li>
+									<li>从业三年</li>
+								</ul>
+								<h3>12888<span>元/26天</span></h3>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="pagination">
+			
+		</div>
+	</div>
+	<!--底部-->
+	<div class="foot_box">
+		<div class="foot">Copyright@2016上海家策教育科技有限公司<span>沪IPC备12345678号</span></div>
+	</div>
+	<div class="bottom_fixed">
+		<img class="top_img" src="img/qqren.png"/>
+		<div class="link_phone">
+			<p>服务热线</p>
+			<p>021-6666&nbsp;&nbsp;8888</p>
+		</div>
+		<div class="qq_link">
+			<p>QQ交谈</p>
+			<p>QQ交谈</p>
+			<p>QQ交谈</p>
+		</div>
+		<div class="lin_wechat">
+		</div>
+		<div id="goTopBtn" class="back_top">返回顶部</div>
+	</div>
+</body>
+<script type="text/javascript">
+
+	var pageNumber = 1;
+	var pageSize = 8;	
+	function pagination(records){
+		$("#pagination").pagination(records, {
+		    num_edge_entries: 1,
+		    num_display_entries: 4,
+		    current_page:pageNumber-1,
+		    items_per_page:pageSize,
+		    prev_text:"上一页",
+		    next_text:"下一页",
+		    callback: page_index
+		});
+	};	
+			
+	function page_index(page_index){
+		var pageNumber = page_index+1;
+		StaffPersonInfoList(pageNumber,pageSize);
+	};
+	function StaffPersonInfoList(pageNumber,pageSize,serviceItemCode,experience,age,price,zodiac,education,nativePlace,sex,serType,workStatus){
+	$.ajax({
+		url: publicPath+"/api/houseKeeping/StaffPersonInfoList",
+		type: "post",
+		data: {
+			pageNumber:pageNumber,
+			pageSize:pageSize,
+			itemCode:serviceItemCode,
+			tenantId:"1",
+			servicePrice:price,
+			experence:experience,
+			age:age,
+			zodiac:zodiac,
+			education:education,
+			nativePlace:nativePlace,
+			sex:sex,
+			workStatus:workStatus,
+			serviceNature:serType
+			},
+		dataType: "json",
+		async:false,
+		success: function success(data) {
+			if(data.success) {
+				if(data.code==0){
+					var dataJD=data.jsonData.rows;
+					var html=""
+					$.each(dataJD, function(i,item) {
+						html+="<li data-staffId='"+item.staffId+"'>"+
+						"<div class='card'>"+
+				"<div class='gold_list_l left'>"+
+				"<img src='"+item.headImage+"'/>"+
+				"</div>"+
+				"<div class='gold_list_r left'>"+
+				"<h1 class='right_top'>"+item.staffName+
+				"<span class='service'>"+item.workStatus+
+				"</span>"+
+				"<span class='per_info'>"+item.age+"岁/属"+item.zodiac+"/"+item.nativePlace+"人"+
+				"</span>"+
+				"</h1>"+
+				"<p>"+item.serviceItemName+"</p>"+
+				"<ul class='per_info_list'>"+
+				"<li>"+item.education+"学历"+"</li>"+
+				"<li>"+item.constellation+"</li>"+
+				"<li>"+"从业"+item.experience.split(",")[1]+"年"+"</li>"+
+				"</ul>"+
+				"<h3>"+item.price+"元"+"</h3>"
+				"</div>"+
+				"</div>"+
+				"</li>";
+					});
+					$("#staffList").html(html);
+				}
+			} else {
+				console.log(data.msg);
+			}
+		},
+		error: function(err) {
+			console.log(err);
+		}
+	});
+	}
+	//加载内容
+    function content(serviceItemCode){
+				$.ajax({
+					url: publicPath+"/api/houseKeeping/objectContent",
+					type: "post",
+					data: {itemCode:serviceItemCode,tenantId:"1"},
+					dataType: "json",
+					success: function success(data) {
+						if(data.success) {
+							if(data.code==0){
+								dataJD=data.jsonData;
+								$("#object").html(dataJD.serviceObject);
+								$("#content").html(dataJD.serviceContent);
+							}
+						} else {
+							console.log(data.msg);
+						}
+					},
+					error: function(err) {
+						console.log(err);
+					}
+				});
+				//根据不同工种加载筛选项
+				 /* if(serviceItemCode=="01"){
+					$(".common").each(function(){
+				 		if($(this).hasClass("yuesao")){
+				 			
+				 		}else{
+				 			$(this).remove();
+				 		}
+					})
+				}
+				if(serviceItemCode=="02"){
+					$(".common").each(function(){
+				 		if($(this).hasClass("yuying")){
+				 			$(this).css("display","block");
+				 		}else{
+				 			$(this).remove();
+				 		}
+					})
+				}
+				if(serviceItemCode=="03"){
+					$(".common").each(function(){
+				 		if($(this).hasClass("baomu")){
+				 			$(this).css("display","block");
+				 		}else{
+				 			$(this).remove();
+				 		}
+					})
+				}
+				if(serviceItemCode=="04"){
+					$(".common").each(function(){
+				 		if($(this).hasClass("yanglao")){
+				 			$(this).css("display","block");
+				 		}else{
+				 			$(this).remove();
+				 		}
+					})
+				}
+				if(serviceItemCode=="05"){
+					$(".common").each(function(){
+				 		if($(this).hasClass("zhongdian")){
+				 			$(this).css("display","block");
+				 		}else{
+				 			$(this).remove();
+				 		}
+					})
+				}
+				if(serviceItemCode=="06"){
+					$(".common").each(function(){
+				 		if($(this).hasClass("guanjia")){
+				 			$(this).css("display","block");
+				 		}else{
+				 			$(this).remove();
+				 		}
+					})
+				} */
+				if(serviceItemCode=="04"||serviceItemCode=="06"){
+					var html="<div class='select_list hide_li' style='display:none;'>"+
+					"<div class='select_label'>性别：</div>"+
+					"<div class='select_r'>"+
+					"<ul>"+
+					"<li class='active' data-serType=''>不限</li>"+
+					"<li data-serType='01'>男</li>"+
+					"<li data-serType='02'>女</li>"+
+					"</ul>"+
+					"</div>"+
+					"</div>";
+					$(".sex").html(html);	
+				} 
+				if(serviceItemCode=="01"||serviceItemCode=="02"||serviceItemCode=="06"){
+					var html="<div class='select_list hide_li' style='display:none;'>"+
+					"<div class='select_label'>服务类型：</div>"+
+					"<div class='select_r'>"+
+					"<ul>"+
+					"<li class='active' data-serType='01'>住家</li>"+
+					"</ul>"+
+					"</div>"+
+					"</div>";
+					$(".serType").html(html);	
+				}
+				if(serviceItemCode=="03"||serviceItemCode=="04"){
+					var html="<div class='select_list hide_li' style='display:none;'>"+
+					"<div class='select_label'>服务类型：</div>"+
+					"<div class='select_r'>"+
+					"<ul>"+
+					"<li class='active' data-serType=''>不限</li>"+
+					"<li data-serType='01'>临时</li>"+
+					"<li data-serType='02'>长期</li>"+
+					"</ul>"+
+					"</div>"+
+					"</div>";
+					$(".serType").html(html);	
+				}
+				if(serviceItemCode=="05"){
+					var html="<div class='select_list hide_li' style='display:none;'>"+
+					"<div class='select_label'>服务类型：</div>"+
+					"<div class='select_r'>"+
+					"<ul>"+
+					"<li class='active' data-serType=''>不限</li>"+
+					"<li data-serType='01'>住家</li>"+
+					"<li data-serType='02'>不住家</li>"+
+					"</ul>"+
+					"</div>"+
+					"</div>";
+					$(".serType").html(html);	
+				} 
+				//加载员工列表信息
+				$.ajax({
+					url: publicPath+"/api/houseKeeping/StaffPersonInfoList",
+					type: "post",
+					data: {itemCode:serviceItemCode,tenantId:"1"},
+					dataType: "json",
+					async:false,
+					success: function success(data) {
+						if(data.success) {
+							if(data.code==0){
+								dataJD=data.jsonData;
+								pagination(dataJD.records);
+								console.log(data.msg);
+							}
+						} else {
+							console.log(data.msg);
+						}
+					},
+					error: function(err) {
+						console.log(err);
+					}
+				});
+				StaffPersonInfoList(pageNumber,pageSize,serviceItemCode);
+		   }
+	$(function(){
+		//学历加载
+		$.ajax({
+				url: publicPath+"/api/common/getDictionaryData/c012",
+				type: "post",
+				data: {},
+				dataType: "json",
+				success: function success(data) {
+					if(data.success) {
+						if(data.code==0){
+							var dataJD=data.jsonData;
+							var html=""
+							$.each(dataJD, function(i,item) {
+								html+="<li data-education='"+item.code+"'>"+item.name+"</li>"
+							});
+							$(".education").append(html);
+						}
+					} else {
+						console.log(data.msg);
+					}
+				},
+				error: function(err) {
+					console.log(err);
+				}
+			});
+		//属相加载
+		$.ajax({
+				url: publicPath+"/api/common/getDictionaryData/c009",
+				type: "post",
+				data: {},
+				dataType: "json",
+				success: function success(data) {
+					if(data.success) {
+						if(data.code==0){
+							var dataJD=data.jsonData;
+							var html=""
+							$.each(dataJD, function(i,item) {
+								html+="<li data-zodiac='"+item.code+"'>"+item.name+"</li>"
+							});
+							$(".zodiac").append(html);
+						}
+					} else {
+						console.log(data.msg);
+					}
+				},
+				error: function(err) {
+					console.log(err);
+				}
+			});
+		//籍贯加载
+		$.ajax({
+				url: publicPath+"/api/common/getDictionaryData/c010",
+				type: "post",
+				data: {},
+				dataType: "json",
+				success: function success(data) {
+					if(data.success) {
+						if(data.code==0){
+							var dataJD=data.jsonData;
+							var html=""
+							$.each(dataJD, function(i,item) {
+								html+="<li data-nativePlace='"+item.code+"'>"+item.name+"</li>"
+							});
+							$(".nativePlace").append(html);
+						}
+					} else {
+						console.log(data.msg);
+					}
+				},
+				error: function(err) {
+					console.log(err);
+				}
+			});
+		//经验选择
+			$.ajax({
+				url: publicPath+"/api/common/getDictionaryData/c007",
+				type: "post",
+				data: {},
+				dataType: "json",
+				success: function success(data) {
+					if(data.success) {
+						if(data.code==0){
+							var dataJD=data.jsonData;
+							var html=""
+							$.each(dataJD, function(i,item) {
+								html+="<li data-experience='"+item.code+"'>"+item.name.replace(",","-")+"年"+"</li>";
+							});
+							$(".list1").append(html);
+							$(".list1 li").eq(1).html(dataJD[0].name.split(",")[1]+"年以下");
+							$(".list1 li").eq(dataJD.length).html(dataJD[dataJD.length-1].name.split(",")[0]+"年以上");
+						}
+					} else {
+						console.log(data.msg);
+					}
+				},
+				error: function(err) {
+					console.log(err);
+				}
+			});
+			//年龄选择
+			$.ajax({
+				url: publicPath+"/api/common/getDictionaryData/c008",
+				type: "post",
+				data: {},
+				dataType: "json",
+				success: function success(data) {
+					if(data.success) {
+						if(data.code==0){
+							var dataJD=data.jsonData;
+							var html=""
+							$.each(dataJD, function(i,item) {
+								html+="<li data-age='"+item.code+"'>"+item.name.replace(",","-")+"岁"+"</li>"
+							});
+							$(".list2").append(html);
+							$(".list2 li").eq(1).html(dataJD[0].name.split(",")[1]+"岁以下");
+							$(".list2 li").eq(dataJD.length).html(dataJD[dataJD.length-1].name.split(",")[0]+"岁以上");
+						}
+					} else {
+						console.log(data.msg);
+					}
+				},
+				error: function(err) {
+					console.log(err);
+				}
+			});
+			//价格区间
+			$.ajax({
+				url: publicPath+"/api/common/getDictionaryData/c006",
+				type: "post",
+				data: {},
+				dataType: "json",
+				success: function success(data) {
+					if(data.success) {
+						if(data.code==0){
+							var dataJD=data.jsonData;
+							var html=""
+							$.each(dataJD, function(i,item) {
+								html+="<li data-salary='"+item.code+"'>"+item.name.replace(",","-")+"元"+"</li>";
+								
+							});
+							$(".list3").append(html);
+							$(".list3 li").eq(1).html(dataJD[0].name.split(",")[1]+"元以下");
+							$(".list3 li").eq(dataJD.length).html(dataJD[dataJD.length-1].name.split(",")[0]+"元以上");
+						}
+					} else {
+						console.log(data.msg);
+					}
+				},
+				error: function(err) {
+					console.log(err);
+				}
+			});
+		//服务工种加载
+		$.ajax({
+				url: publicPath+"/api/houseKeeping/serviceItems",
+				type: "post",
+				data: {tenantId:"1"},
+				dataType: "json",
+				success: function success(data) {
+					if(data.success) {
+						if(data.code==0){
+							dataJD=data.jsonData;
+							var html=""
+							$.each(dataJD, function(i,item) {
+								html+="<li data-serCode='"+item.serviceItemCode+"'>"+item.serviceItemName+
+								"</li>	"
+							});
+							$(".menu_left ul").html(html);
+							$(".menu_left ul li:first-child").addClass("active");
+							//服务内容与对象加载
+							var  serviceItemCode=$(".menu_left ul li:first-child").attr("data-serCode");
+							content(serviceItemCode);	
+					     }
+					}
+						else {
+						console.log(data.msg);
+					}
+				},
+				error: function(err) {
+					console.log(err);
+				}
+			});
+	});
+	//筛选项初始化
+	function init(){
+		$(".select_r ul li").removeClass("active");
+		$(".select_r ul li:first-child").addClass("active");
+		$(".up").removeClass("active");
+		$(".hide_li").hide();
+		$(".up span").text("展开");
+	}
+	//点击加载内容
+	$(".menu_left ul").on("click","li",function(){
+		$(this).addClass("active");
+		$(this).siblings().removeClass("active");
+		var serviceItemCode=$(this).attr("data-serCode");
+		init();
+		content(serviceItemCode);
+		});
+	function condition(){
+		var serviceItemCode=$(".menu_left ul li.active").attr("data-serCode");
+	    var experience=$(".list1 li.active").attr("data-experience"); 
+		var age=$(".list2 li.active").attr("data-age");
+		var price=$(".list3 li.active").attr("data-salary");
+		var zodiac=$(".zodiac li.active").attr("data-zodiac");
+		var education=$(".education li.active").attr("data-education");
+		var nativePlace=$(".nativePlace li.active").attr("data-nativePlace");
+		var sex=$(".sex div.select_r ul li.active").attr("data-sex");
+		var serType=$(".serType div.select_r ul li.active").attr("data-serType");
+		var workStatus=$(".topradio input[name=status]:checked").val();
+		//总数
+			$.ajax({
+				url: publicPath+"/api/houseKeeping/StaffPersonInfoList",
+				type: "post",
+				data: {
+					itemCode:serviceItemCode,
+					tenantId:"1",
+					experence:experience,
+					age:age,
+					servicePrice:price,
+					zodiac:zodiac,
+					education:education,
+					nativePlace:nativePlace,
+				    sex:sex,
+				    serviceNature:serType,
+				    workStatus:workStatus
+				},
+				dataType: "json",
+				async:false,
+				success: function success(data) {
+					if(data.success) {
+						if(data.code==0){
+							dataJD=data.jsonData;
+							pagination(dataJD.records);
+							console.log(data.msg);
+						}
+					} else {
+						console.log(data.msg);
+					}
+				},
+				error: function(err) {
+					console.log(err);
+				}
+			});
+			StaffPersonInfoList(pageNumber,pageSize,serviceItemCode,experience,age,price,zodiac,education,nativePlace,sex,serType,workStatus);
+	}
+	//工作状态筛选
+	$("input[name=status]").change(function(){
+		condition();
+	})
+	// 筛选
+	$(".select_r ul").on("click","li",function(){
+		$(this).addClass("active");
+		$(this).siblings("li").removeClass("active");
+		condition();
+		})
+		
+	// 筛选
+	$(".addCon").on("click",".select_r ul li",function(){
+		$(this).addClass("active");
+		$(this).siblings("li").removeClass("active");	
+	});
+	//链接阿姨详情
+	$("#staffList").on("click","li",function(){
+		var staffId=$(this).attr("data-staffId");
+		var serviceItemCode=$(".menu_left ul li.active").attr("data-serCode");
+		location.href="jzfwxq.html?staffId="+staffId+"&serviceItemCode="+serviceItemCode;
+	})
+
+		
+
+</script>
+</html>

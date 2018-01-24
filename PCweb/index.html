@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/head-foot.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/top.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<title>首页</title>
+</head>
+<body>
+	<!--头部-->
+	<div class="head_box">
+		<div class="head">
+			<div class="left logo">
+				<a href="index.html" target="_self">
+					<img src="img/logo0.png"/>
+				</a>
+			</div>
+			<div class="left more_s">
+				<select>
+					<option>更多导航</option>
+					<option>更多导航0</option>
+					<option>更多导航1哈</option>
+				</select>
+			</div>
+			<div class="right head_r">
+				<ul> 
+					<li><a href="login.html" target="_self">登录</a></li>
+					<li><a href="myOrder.html" target="_self">我的订单</a></li>
+					<li><a href="myProfile.html" target="_self">我的账户</a></li>
+					<li class="wechat"><a href="#">官网微信</a>
+						<div class="wechat_b">
+						</div>
+					</li>
+				</ul>
+				<div class="my_res">
+					<span><a href="myReservation.html" target="_self">我的预约>></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="top_com_box">
+		<div class="top_com">
+			<div class="first_word">家</div>
+			<div class="top_com_l">
+				<h1><a href="index.html">家策家政（徐汇店）</a></h1>
+				<p>上海市徐汇区凯旋路3500号华苑大厦1座19楼A室</p>
+			</div>
+			<div class="top_com_r">
+				<div class="phone">021-6666&nbsp;&nbsp;8888</div>
+				<div class="nav">
+					<ul>
+						<li class="active"><a href="index.html" target="_self">首页</a></li>
+						<li><a href="jzfw.html" target="_self">家政服务</a></li>
+						<li><a href="serviceCustomize.html" target="_self">服务定制</a></li>
+						<li><a href="train.html" target="_self">专业培训</a></li>
+						<li><a href="job.html" target="_self">岗位招聘</a></li>
+						<li><a href="about_us.html" target="_self">关于我们</a></li>
+					<ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--主要内容-->
+	<div class="banner">
+		<img src="img/banner.png"/>
+	</div>
+	<!--右侧导航-->
+	<div class="left_menu">
+		<p class="active left_menu0">家政服务</p>
+		<p class="left_menu1">服务流程</p>
+		<p>金牌家政员</p>
+	</div>
+	<div class="pro menu_cont">
+		<h3 class="pro_tt">家政服务</h3>
+		<p class="pro_ttf">给生活一点品质&nbsp;&nbsp;&nbsp;&nbsp;给家人一份关爱</p>
+		<ul class="pro_list" id="pro_list">
+		</ul>
+	</div>
+	<div class="progress_box menu_cont">
+		<div class="progress">
+			<h3 class="pro_tt">服务流程</h3>
+			<p class="pro_ttf">三方支付并监管&nbsp;&nbsp;&nbsp;&nbsp;为服务提供多重保障</p>
+			<img src="img/liucheng.png"/>
+		</div>
+	</div>
+	<div class="gold menu_cont">
+		<h3 class="pro_tt">金牌家政员</h3>
+		<p class="pro_ttf">用服务赢得尊重&nbsp;&nbsp;&nbsp;&nbsp;用微笑温暖人心</p>
+		<ul class="gold_list">
+		</ul>
+	</div>
+	<!--底部-->
+	<div class="foot_box">
+		<div class="foot">Copyright@2016上海家策教育科技有限公司<span>沪IPC备12345678号</span></div>
+	</div>
+	<div class="bottom_fixed">
+		<img class="top_img" src="img/qqren.png"/>
+		<div class="link_phone">
+			<p>服务热线</p>
+			<p>021-6666&nbsp;&nbsp;8888</p>
+		</div>
+		<div class="qq_link">
+			<p>QQ交谈</p>
+			<p>QQ交谈</p>
+			<p>QQ交谈</p>
+		</div>
+		<div class="lin_wechat">
+		</div>
+		<div id="goTopBtn" class="back_top">返回顶部</div>
+	</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	$("#pro_list").on("click","li",function(){
+		window.location.href="jzfw.html"
+	})
+	//服务详情
+	$.ajax({
+			url: publicPath+"/api/index/serviceItems",
+			type: "post",
+			data: {
+				tenantId: "1"
+			},
+			dataType: "json",
+			success: function success(data) {
+				if(data.success) {
+					if(data.code==0){
+						var dataObj = data.jsonData;
+					var html = "";
+					var count = 0;
+					$.each(dataObj, function(i, item) {
+						count++;
+						html += "<li>" +
+							"<div class='img_mask'>" + "</div>" +
+							"<img class='pro_img' src='/images"+item.imgUrl+"'/>" +
+							"<img class='hot' src='img/hot.png ' data-hot='"+item.isHot+"'/>" +
+							"<div class='pro_detail'>" +
+								"<h3 class='left'>" +item.serviceItemName+ "</h3>" +
+								"<h4>" +item.servicePrice+
+								"<span>"+item.servicePriceUnit+ "</span>" + 
+								"</h4>" +
+							"</div>"+
+							"<p>" + item.serviceDesc + "</p>" +
+							"</li>";	
+					});
+					$(".pro_list").html(html);
+					$(".hot").each(function(){
+						if ($(this).data("hot")==0){
+							$(this).css("display","none");
+						};
+					});
+					var html1 = "<li class='waiting'>" +
+						"<h5>" + "敬请期待..." + "</h5>" +
+						"</li>";
+					$(".pro_list li").last().after(html1);
+					if(count == 3 || count == 6) {
+						$(".waiting").css("display", "none");
+					}
+				} else {
+					console.log(data.msg)
+				}
+			}
+		},
+					
+			error: function(err) {
+				console.log(err);
+			}
+		});
+	
+	//金牌员工
+		$.ajax({
+			url: publicPath+"/api/staffs/staffRecommend",
+			type: "post",
+			data: {
+				tenantId: "1"
+			},
+			dataType: "json",
+			success: function success(data) {
+				if(data.success) {
+				var dataObj = data.jsonData;
+				var html = "";
+					$.each(data.jsonData, function(i, item) {
+						html+="<li class='gold_list_li' data-staffId='"+item.staffId+"' data-sercode='"+item.serviceItemCode+"'>"+
+						"<div class='gold_list_l left'>"+
+						"<img src='"+item.headImage+"'/>"+
+						"</div>"+
+						"<div class='gold_list_r right'>"+
+						"<h1 class='right_top'>"+item.staffName+
+						"<span class='service'>"+item.workStatus+
+						"</span>"+
+						"<span class='per_info'>"+item.age+"岁/属"+item.zodiac+"/"+item.nativePlace+"人"+
+						"</span>"+
+						"</h1>"+
+						"<p>"+"金牌"+item.serviceItemName+"</p>"+
+						"<ul class='per_info_list'>"+
+						"<li>"+item.educarion+"学历"+"</li>"+
+						"<li>"+item.constellation+"</li>"+
+						"<li>"+"从业"+item.experience.split(",")[1]+"年"+"</li>"+
+						"</ul>"+
+						"<ul class='per_ab_list'>"+
+						"</ul>"+
+						"</div>"+
+						"</li>";
+					});
+					$(".gold_list").html(html);
+					
+					
+					
+					$(".per_ab_list").each(function(i,item){
+						var html1="";
+						for(var j=0;j<dataObj[i].characerFeature.split(",").length;j++){
+							html1+="<li>"+dataObj[i].characerFeature.split(",")[j]+"</li>";	
+						}
+						$(this).html(html1);
+						$(this).find("li:gt(2)").hide;
+					})
+					
+					/* for(var i=0;i<dataObj.length;i++){
+						for(var i=0;i<dataObj[i].characerFeature.length;i++){
+							html1+="<li>"+item.characerFeature[i]+"</li>";	
+						}
+						$(".gold_list .per_ab_list").html(html1);
+					} */
+					
+									} else {
+					console.log(data.msg);
+				}
+			},
+			error: function(err) {
+				console.log(err);
+			}
+		});
+		$(".gold_list").on("click","li",function(){
+			var staffId=$(this).attr("data-staffId");
+			var serviceItemCode=$(this).attr("data-sercode");
+				location.href="jzfwxq.html?staffId="+staffId+"&serviceItemCode="+serviceItemCode;
+		})
+
+})	
+</script>
+</html>

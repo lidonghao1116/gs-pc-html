@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/serviceCustomize.css" rel="stylesheet" type="text/css" />>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="main_content">
+		<h2 class="progress_tt">个性服务定制流程</h2>
+		<img class="progress_img" src="img/progress0.png"/>
+		<ul class="work">
+			<li class="work_list01 work_list"><a href="serviceStep2.html" target="_self"><p>月嫂</p></a></li>
+			<li class="work_list02 work_list"><a href="serviceStep2.html" target="_self"><p>育婴师</p></a></li>
+			<li class="work_list03 work_list"><a href="serviceStep2.html" target="_self"><p>保姆</p></a></li>
+			<li class="work_list04 work_list"><a href="serviceStep2.html" target="_self"><p>养老陪护</p></a></li>
+			<li class="work_list05 work_list"><a href="serviceStep2.html" target="_self"><p>钟点工</p></a></li>
+			<li class="work_list06 work_list"><a href="serviceStep2.html" target="_self"><p>家庭管家</p></a></li>
+			<li class="work_list07"><a href="#"><p>敬请期待</p></a></li>
+			<li class="work_list08"><a href="#"><p></p></a></li>
+		</ul>
+	</div>
+	</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+							var html="";
+						   var n=0;
+							for(var i=0;i<2;i++){
+								n++;
+								html+="<li class='work_list0"+n+" work_list'>"+
+								"<a href='serviceStep2.html' target='_self'>"+
+								"<p data-serCode='02'>"+"月嫂"+"</p>"+
+								"</a>"+
+								"</li>";
+								$(".work").append(html);
+								
+						
+							};
+	})
+	</script>
+</html>

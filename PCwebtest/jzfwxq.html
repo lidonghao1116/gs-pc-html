@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/foundation-datepicker.css" rel="stylesheet" type="text/css">
+    <link href="css/head-foot.css" rel="stylesheet" type="text/css" />
+    <link href="css/jzfwxq.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/top.js"></script>
+    <title>家政服务详情</title>
+
+</head>
+
+<body>
+    <!--头部-->
+    <div class="head_box">
+        <div class="head">
+            <div class="left logo">
+                <a target="_self">
+                    <img src="img/logo0.png" />
+                </a>
+            </div>
+            <div class="left more_s">
+                <select>
+				<option>更多导航</option>
+				<option>更多导航0</option>
+				<option>更多导航1哈</option>
+			</select>
+            </div>
+            <div class="right head_r">
+                <ul>
+                    <li><a>登录</a></li>
+                    <li><a>退出</a></li>
+                    <li><a>我的预约</a></li>
+                    <li><a>我的账户</a></li>
+                    <li class="wechat"><a>官网微信</a>
+                        <div class="wechat_b">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="top_com_box">
+        <div class="top_com">
+            <a href="index.html">
+                <div class="first_word"></div>
+                <div class="top_com_l">
+                    <h1></h1>
+                    <p></p>
+                </div>
+            </a>
+            <div class="top_com_r">
+                <div class="phone"></div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html" target="_self">首页</a></li>
+                        <li class="active"><a href="jzfw.html" target="_self">家政服务</a></li>
+                        <li><a href="serviceCustomize.html" target="_self">服务定制</a></li>
+                        <li><a href="train.html" target="_self">专业培训</a></li>
+                        <li><a href="job.html" target="_self">岗位招聘</a></li>
+                        <li><a href="about_us.html" target="_self">关于我们</a></li>
+                        <ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--主要内容-->
+    <div class="main_content">
+        <div class="detail_info clearfix">
+            <div class="card_img">
+                <img src="" />
+                 <p></p>
+            </div>
+            <div class="info_r left">
+                <h1></h1>
+                <div class="service_box">
+                     <p class="service_price"><span></span></p>
+                    <p class="gongzhong"><span></span></p>
+                    <p class="jineng"><span></span></p> 
+                </div>
+                <input class="yuyue" type="button" value="预约面试">
+            </div>
+        </div>
+        <!--定位导航菜单-->
+        <div class="for_menu">
+            <ul class="menu_li">
+                <li class="active">基本信息</li>
+                <li>视频照片</li>
+                <li>经历和评价</li>
+            </ul>
+        </div>
+        <div class="cert tab_content">
+            <h2 class="title_h2 detail_tt">证书信息</h2>
+            <ul class="cert_list" id="cerd">
+                <li>身份证</li>
+                <!-- <li>母婴护理证（初级/五级）</li> -->
+            </ul>
+        </div>
+        <div class="basic tab_content tab_content_sp">
+            <h2 class="title_h2 detail_tt">基本信息</h2>
+            <div class="basic_tabel">
+                <table>
+                    <tr>
+                        <td class="first">血型：</td>
+                        <td class="second" id="blood"></td>
+                        <td class="third">服务区域：</td>
+                        <td class="four" id="serArea"></td>
+                    </tr>
+                    <tr>
+                        <td class="first">身高(cm)：</td>
+                        <td class="second" id="height"></td>
+                        <td class="third">从业经验：</td>
+                        <td class="four" id="workExp"></td>
+                    </tr>
+                    <tr>
+                        <td class="first">体重(kg)：</td>
+                        <td class="second" id="weight"></td>
+                        <td class="third">性格特点：</td>
+                        <td class="four" id="character"></td>
+                    </tr>
+                    <tr>
+                        <td class="first">婚姻状况：</td>
+                        <td class="second" id="marry"></td>
+                        <td class="third">烹饪特点：</td>
+                        <td class="four" id="cooking"></td>
+                    </tr>
+                    <tr>
+                        <td class="first">生育情况：</td>
+                        <td class="second" id="fertilitySituation"></td>
+                        <td class="third">语言特点：</td>
+                        <td class="four" id="language"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="video tab_content tab_content_sp">
+            <h2 class="title_h2 detail_tt">视频秀</h2>
+            <div class="video_c">
+              
+            </div>
+        </div>
+        <div class="photo tab_content">
+            <h2 id="detail_tt" class="title_h2 detail_tt">照片墙</h2>
+            <div class="photo_c">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="comment tab_content tab_content_sp">
+            <h2 class="title_h2 detail_tt">经历和评价</h2>
+            <div class="pingjia">
+                <span>工作经历：</span>
+                <p id="work"></p>
+            </div>
+            <div class="pingjia">
+                <span>自我评价：</span>
+                <p id="myself"></p>
+            </div>
+            <div class="pingjia">
+                <span>老师评价：</span>
+                <p id="teacher"></p>
+            </div>
+        </div>
+    </div>
+    <!--预约服务信息-->
+    <div class="mask"></div>
+    <div class="mask_sp"></div>
+    <div class="alert_info">
+        <div class="close"></div>
+        <h1 class="info_enter_t">请留下您的信息，我们立即为您安排阿姨面试</h1>
+        <div class="info_enter">
+            <div id="info_enter" class="info_service">
+                 <!-- 月嫂 -->
+                 <div class="info_list common">
+                    <div class="info_lable">服务工种：</div>
+                    <div class="info_r_enter">
+                        <ul class="gzlist"></ul>
+                    </div>
+                </div>
+                <div class="info_list no_common gz01 ">
+                    <div class="info_lable">常规服务：</div>
+                    <div class="info_r_enter">
+                        <p class="">婴儿生活照料、婴儿健康护理、产妇卫生护理</p>
+                    </div>
+                </div>
+                <!-- 育婴 育儿嫂 -->
+                <div class="info_list no_common gz02">
+                    <div class="info_lable">常规服务：</div>
+                    <div class="info_r_enter">
+                        <p class="cgfw">科学喂养、健康护理</p>
+                    </div>
+                </div>
+                <!-- baomu保姆 -->
+                <div class="info_list no_common gz03">
+                    <div class="info_lable">常规服务：</div>
+                    <div class="info_r_enter">
+                        <p class="cgfw">家庭保洁、菜肴烹饪、洗涤熨烫</p>
+                    </div>
+                </div>
+                <!-- yanglao老人陪护 -->
+                <div class="info_list no_common gz04">
+                    <div class="info_lable">常规服务：</div>
+                    <div class="info_r_enter">
+                        <p class="cgfw">老人生活照料、生命体征测量、心理疏导、基础护理</p>
+                    </div>
+                </div>
+                 <!-- 钟点工 -->
+                <!-- 家庭管家 -->
+                 <!-- 医院护工 -->
+                <div class="info_list no_common gz07">
+                    <div class="info_lable">常规服务：</div>
+                    <div class="info_r_enter">
+                        <p class="">老人生活照料、生命体征测量、心理疏导、基础护理</p>
+                    </div>
+                </div>
+                <!-- 分割线 -->
+                <h3 class="border"></h3>
+                <!-- 月嫂预产期 -->
+                <div class="info_list no_common gz01">
+                    <div class="info_lable">预产期：</div>
+                    <div class="info_r_enter">
+                        <input id="xdt" name="xdt" class="date" placeholder="请选择日期" type="text" readonly="readonly" />
+                        <div class="checkbox_box">
+                            <input id="baby" class="baby" type="checkbox" name="" />
+                            <div class="check-box">
+                            </div>
+                            <label for="baby">宝宝已出生</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 服务时间 -->
+                <div class="info_list no_common gz01 gz02 gz06">
+                    <div class="info_lable">服务时间：</div>
+                    <div class="info_r_enter">
+                        <input type="text" id="dpd1" name="dpd1" class="date" placeholder="请选择日期" readonly="readonly" />&nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" id="dpd2" name="dpd2" class="date" placeholder="请选择日期" readonly="readonly" />
+                    </div>
+                </div>
+                <!-- 精确到分秒的时间段 -->
+                <div class="info_list no_common gz03 gz04 gz05 gz07">
+                    <div class="info_lable">服务时间：</div>
+                    <div class="info_r_enter">
+                        <input id="datesecond1" class="date datesecond" name="datesecond1" placeholder="请选择日期" type="text" readonly="readonly" />&nbsp;&nbsp;-&nbsp;&nbsp;
+                        <input id="datesecond2" class="date datesecond" name="datesecond2" placeholder="请选择日期" type="text" readonly="readonly" />
+                    </div>
+                </div>
+                <!-- 养老 -->
+                <div class="info_list  no_common gz04">
+                    <div class="info_lable">老人能否自理：</div>
+                    <div class="info_r_enter select0">
+                        <ul class="home oldSelf">
+                            <li class="active" data-serCode="01">能</li>
+                            <li data-serCode="02">否</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 服务类型 -->
+                <div class="info_list  no_common  gz07">
+                    <div class="info_lable">服务类型：</div>
+                    <div class="info_r_enter select0">
+                        <ul class="home serType">
+                            <li data-serCode="05">24小时</li>
+                            <li data-serCode="06">白班</li>
+                            <li data-serCode="07">夜班</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="info_list  no_common  gz03 gz04">
+                    <div class="info_lable">服务类型：</div>
+                    <div class="info_r_enter select0">
+                        <ul class="home serType">
+                            <li data-serCode="01">住家型</li>
+                            <li data-serCode="02">不住家型</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info_list no_common gz05">
+                    <div class="info_lable">服务类型：</div>
+                    <div class="info_r_enter select0">
+                        <ul class="home serType">
+                            <li data-serCode="03">临时</li>
+                            <li data-serCode="04">长期</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 公共 -->
+                <div class="info_list common">
+                    <div class="info_lable">服务内容：</div>
+                    <div class="info_r_enter select_sp otherXQ">
+                        <ul class="otherReq">
+                        </ul>
+                    </div>
+                </div>
+                <div class="info_list common">
+                    <div class="info_lable">备注：</div>
+                    <div class="info_r_enter">
+                        <textarea name="special" rows="4" cols="20" class="textarea" placeholder="有其他需求请备注"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="per_info" class="per_info_sp">
+                <h1 class="info_enter_t">服务地址：</h1>
+                <div class="address_box">
+                    <!-- <div class="address_list">
+                        <div class="radio_box">
+                            <input type="radio" id="" name="address" value="0">
+                            <div class="circle-box">
+                                <span class="circle"></span>
+                            </div>
+                        </div>
+                        <div class="address—info">
+                            <span>13900000000</span>
+                            <span>张三</span>
+                            <span>上海市-徐汇区-城区&nbsp;&nbsp;南丹东路300号</span>
+                        </div>
+                        <a class="edit_ad">修改</a>
+                    </div>
+                    <div class="address_list">
+                        <div class="radio_box">
+                            <input type="radio" id="" name="address" value="1">
+                            <div class="circle-box">
+                                <span class="circle"></span>
+                            </div>
+                        </div>
+                        <div class="address—info">
+                            <span>13900000000</span>
+                            <span>张三</span>
+                            <span>上海市-徐汇区-城区&nbsp;&nbsp;南丹东路300号</span>
+                        </div>
+                        <a class="edit_ad">修改</a>
+                    </div> -->
+                    <!-- <div class="more_ad"><span>更多地址</span></div>
+                    <div class="add_ad"><span class="add_address">+新增地址</span></div>
+                    <div class="no_ad">暂无服务地址<span class="add_address">新增</span></div> -->
+                </div>
+            </div>
+            <div class="button commit"><input id="submit" type="button" value="保存并提交" /></div>
+        </div>
+    </div>
+    <div class="alert_address" id="save_ad">
+        <input name="id" type="hidden" value="">
+        <div class="ad_close"></div>
+        <h1>保存地址</h1>
+        <p>最多只能添加三条地址</p>
+        <div class="alert_button">
+            <a class="confirm" id="cancel" >确定</a>
+        </div>
+    </div>
+    <div class="alert_address" id="edit_ad">
+        <div class="ad_close"></div>
+        <h1>新增服务地址</h1>
+        <input name="id" type="hidden" value="">
+        <div class="ad_info_box">
+            <div class="ad_info_enter">
+                <label class="ad_info_enter_l">姓名：</label>
+                <div class="ad_info_enter_r">
+                    <input name="userName" type="text" />
+                </div>
+            </div>
+            <div class="ad_info_enter">
+                <label class="ad_info_enter_l">联系电话：</label>
+                <div class="ad_info_enter_r">
+                    <input name="phone" type="text" />
+                </div>
+            </div>
+            <div class="ad_info_enter">
+                <label class="ad_info_enter_l">服务地址：</label>
+                <div class="ad_info_enter_r">
+                     <select name="province">
+                        <option value="" class="">请选择省</option>
+                    </select>
+                    <select name="city">
+                        <option value="" class="">请选择市</option>
+                    </select>
+                    <select name="district">
+                        <option value="" class="">请选择区</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ad_info_enter">
+                <label class="ad_info_enter_l">详细地址：</label>
+                <div class="ad_info_enter_r">
+                    <input name="address" class="address" type="text" />
+                </div>
+            </div>
+        </div>
+        <div class="ad_save">
+             <input id="ad_save" type="button" value="保存" />
+        </div>
+    </div>
+    <!--预约成功提示-->
+    <div class="alert_success">
+        <div class="close"></div>
+        <p>预约信息已提交，工作人员稍后会通过电话联系您！<br/><span>可进入预约订单页面查看预约详情</span></p>
+        <div class="button commit">
+            <a href="jzfw.html"><input type="button" value="确定" /></a>
+        </div>
+    </div>
+    <!--底部-->
+    <iframe scrolling="no" src="footer.html" width="100%" frameborder="0" height="270px"></iframe>
+
+    <div class="bottom_fixed">
+        <div class="bottom_fixed_link">
+            <img class="top_img" src="img/qqren.png" />
+            <div class="link_phone">
+                <p>服务热线</p>
+                <p>021-6666&nbsp;&nbsp;8888</p>
+            </div>
+            <div class="qq_link">
+                <p>QQ交谈</p>
+                <p>QQ交谈</p>
+                <p>QQ交谈</p>
+            </div>
+            <div class="lin_wechat">
+            </div>
+        </div>
+        <div id="goTopBtn" class="back_top">返回顶部</div>
+    </div>
+    <!--图片预览-->
+    <div class="photo-mask" style="display: none;"></div>
+    <div class="photo-panel" style="display: none;">
+        <div class="photo-div">
+            <div class="photo-left">
+                <div class="arrow-prv"></div>
+            </div>
+            <div class="photo-img">
+                <div class="photo-close"></div>
+                <div class="photo-view-h">
+                    <img src="">
+                </div>
+            </div>
+            <div class="photo-right">
+                <div class="arrow-next"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mask_s">
+        <div class="alert">
+            <p>您的预约列表中有5笔待处理的预约，请处理完成后再试</p>
+            <div class="alert_bt">
+                <button class="ok" value="">确定</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/foundation-datepicker.js"></script>
+    <script src="js/foundation-datepicker.zh-CN.js"></script>
+    <script>
+        //图片预览
+        var img_index = "";
+        var img_src = "";
+        $(function() {
+                //图片预览
+                //关闭
+                $(".photo-mask").click(function() {
+                    $(".photo-mask").hide();
+                    $(".photo-panel").hide();
+                })
+                $(".photo-close").click(function() {
+                    $(".photo-mask").hide();
+                    $(".photo-panel").hide();
+                });
+                //下一张
+                $(".photo-panel .photo-div .arrow-next").click(function() {
+                    img_index++;
+                    if (img_index >= $(".photo_c li").length) {
+                        img_index = 0;
+                    }
+                    var img_src = $(".photo_c li").eq(img_index).css('backgroundImage');
+                    if (img_src.indexOf("\"") < 0) {
+                        img_src = img_src.slice(4, -1);
+                    } else {
+                        img_src = img_src.slice(5, -2);
+                    }
+                    photoView($(".photo_c li"), img_src);
+                });
+                //上一张
+                $(".photo-panel .photo-div .arrow-prv").click(function() {
+                    img_index--;
+                    if (img_index < 0) {
+                        img_index = $(".photo_c li").length - 1;
+                    }
+                    var img_src = $(".photo_c li").eq(img_index).css('backgroundImage');
+                    if (img_src.indexOf("\"") < 0) {
+                        img_src = img_src.slice(4, -1);
+                    } else {
+                        img_src = img_src.slice(5, -2);
+                    }
+                    photoView($(".photo_c li"), img_src);
+                });
+                //如何调用
+                $(".photo_c").on("click", "ul li", function() {
+                    phototop();
+                    $(".photo-mask").show();
+                    $(".photo-panel").show();
+                    img_index = $(".photo_c li").index($(this))
+                    var img_src = $(".photo_c li").eq(img_index).css('backgroundImage');
+                    if (img_src.indexOf("\"") < 0) {
+                        img_src = img_src.slice(4, -1);
+                    } else {
+                        img_src = img_src.slice(5, -2);
+                    }
+
+                    img_index = $(this).index();
+                    photoView($(this), img_src);
+                });
+
+                $('#datesecond1,#datesecond2').fdatepicker({
+                    format: 'yyyy-mm-dd hh:ii',
+                    pickTime: true
+                });
+                var nowTemp = new Date();
+                var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+                var checkin = $('#xdt').fdatepicker({
+                    onRender: function(date) {
+                        return date.valueOf() < now.valueOf() ? 'disabled' : '';
+                    }
+                });
+
+                var nowTemp = new Date();
+                var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+                var checkin = $('#dpd1').fdatepicker({
+                    onRender: function(date) {
+                        return date.valueOf() < now.valueOf() ? 'disabled' : '';
+                    }
+                }).on('changeDate', function(ev) {
+                    if (ev.date.valueOf() > checkout.date.valueOf()) {
+                        var newDate = new Date(ev.date)
+                        newDate.setDate(newDate.getDate() + 1);
+                        checkout.update(newDate);
+                    }
+                    checkin.hide();
+                    $('#dpd2')[0].focus();
+                }).data('datepicker');
+                var checkout = $('#dpd2').fdatepicker({
+                    onRender: function(date) {
+                        return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+                    }
+                }).on('changeDate', function(ev) {
+                    checkout.hide();
+                }).data('datepicker');
+            })
+//        截取url后面的参数
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+
+        
+ //           服务技能加载
+        function pullSkills(serviceItemCode){
+                $.ajax({
+                    url: publicPath + "/api/common/getSKillsData/c005",
+                    type: "post",
+                    data: {
+                        itemCode: serviceItemCode,
+                        level: "1"
+                    },
+                    dataType: "json",
+                    success: function success(data) {
+                        if (data.success) {
+                            if (data.code == 0) {
+                                var dataJD = data.jsonData;
+                                var html = ""
+                                $.each(dataJD, function(i, item) {
+                                    html += "<li data-skills='" + item.skillsKey + "'>" + item.skillsValue + "</li>"
+                                });
+                                $(".otherReq").html(html);
+                            }
+                        } else {
+                            console.log(data.msg);
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                    }
+                });
+        }
+
+  //        获取地址
+        function getAddress(){
+            $.ajax({
+				url:publicPathCmn+"/api/user/address",
+				type:"get",
+				data:{},
+				dataType:"json",
+				success:function(data){
+					if(data.success){
+		                if(data.code == 0){
+		                	var dataJD = data.jsonData;
+							if(dataJD==""){
+								$(".address_box").html("<div class='no_ad'>暂无服务地址<span class='add_address'>新增</span></div>");
+							}else{ 
+								var html="";
+								$.each(dataJD,function(i,item){
+									html +="<div class='address_list'>"+
+                                            "<input type='hidden' name='phone' value='"+item.phone+"'/>"+
+                                            "<input type='hidden' name='userName' value='"+item.userName+"'/>"+
+                                            "<input type='hidden' name='province' value='"+item.province+"'/>"+
+                                            "<input type='hidden' name='city' value='"+item.city+"'/>"+
+                                            "<input type='hidden' name='district' value='"+item.district+"'/>"+
+                                            "<input type='hidden' name='address' value='"+item.address+"'/>"+
+                                           " <div class='radio_box'>"+
+                                                "<input type='radio'  name='addressId' value='"+item.id+"'>"+
+                                                "<div class='circle-box'>"+
+                                                    "<span class='circle'></span>"+
+                                                "</div>"+
+                                            "</div>"+
+                                            "<div class='address—info'>"+
+                                                "<span>"+item.phone+"</span>"+
+                                                "<span>"+item.userName+"</span>"+
+                                                "<span>"+item.provinceValue+"-"+item.cityValue+"-"+item.districtValue+"&nbsp;&nbsp;"+item.address+"</span>"+
+                                            "</div>"+
+                                            "<a class='edit_ad'>修改</a>"+
+                                       "</div>";
+								});
+								$(".address_box").html(html);
+                                if(dataJD.length<3){
+                                    $(".address_box").append("<div class='add_ad'><span class='add_address'>+新增地址</span></div>");
+                                }
+                                $(".address_box input[name='addressId']:first").attr("checked","checked").siblings(".circle-box").addClass("active");
+							}
+                            
+		                }else{
+		                    console.log(data.msg);
+		                }
+		            }else{
+		                console.log(data.msg);
+		            }
+				},
+			});
+
+        }
+    //默认地址
+     function getNewAddress(){
+            $.ajax({
+				url:publicPathCmn+"/api/user/address/newOne",
+				type:"get",
+				data:{},
+				dataType:"json",
+				success:function(data){
+					if(data.success){
+		                if(data.code == 0){
+		                	var dataJD = data.jsonData;
+							if(dataJD==""){
+								$(".address_box").html("<div class='no_ad'>暂无服务地址<span class='add_address'>新增</span></div>");
+							}else{ 
+								var html ="<div class='address_list'>"+
+                                            "<input type='hidden' name='phone' value='"+dataJD.phone+"'/>"+
+                                            "<input type='hidden' name='userName' value='"+dataJD.userName+"'/>"+
+                                            "<input type='hidden' name='province' value='"+dataJD.province+"'/>"+
+                                            "<input type='hidden' name='city' value='"+dataJD.city+"'/>"+
+                                            "<input type='hidden' name='district' value='"+dataJD.district+"'/>"+
+                                            "<input type='hidden' name='address' value='"+dataJD.address+"'/>"+
+                                           " <div class='radio_box'>"+
+                                                "<input type='radio' checked='checked'  name='addressId' value='"+dataJD.id+"'>"+
+                                                "<div class='circle-box active'>"+
+                                                    "<span class='circle'></span>"+
+                                                "</div>"+
+                                            "</div>"+
+                                            "<div class='address—info'>"+
+                                                "<span>"+dataJD.phone+"</span>"+
+                                                "<span>"+dataJD.userName+"</span>"+
+                                                "<span>"+dataJD.provinceValue+"-"+dataJD.cityValue+"-"+dataJD.districtValue+"&nbsp;&nbsp;"+dataJD.address+"</span>"+
+                                            "</div>"+
+                                            "<a class='edit_ad'>修改</a>"+
+                                       "</div>";
+								$(".address_box").html(html+"<div class='more_ad'><span>更多地址</span></div>");
+							}
+                            
+		                }else{
+		                    console.log(data.msg);
+		                }
+		            }else{
+		                console.log(data.msg);
+		            }
+				},
+			});
+
+        }
+    //       修改地址初始化省市区
+        function cityList(province,city){
+                $("#cou_sel").html("");
+                $.ajax({
+                    url:publicPath+"/api/common/getAreaData/c002",
+                    type:"post",
+                    data:{pcode:province},
+                    dataType:"json",
+                    success:function(data){
+                        if(data.success){
+                            if(data.code == 0){
+                                var dataJD = data.jsonData;
+                                var html="<option value=''>请选择市</option>";
+                                $.each(dataJD, function(i,item) {
+                                    if(item.areaCode==city){
+                                        html += "<option selected='selected' value='" + item.areaCode + "'>" + item.areaName + "</option>";
+                                    }else{
+                                        html += "<option value='" + item.areaCode + "'>" + item.areaName + "</option>";
+                                    }
+                                });
+                                $(".alert_address select[name='city']").html(html);
+                                console.log(data.msg);
+                            }else{
+                                console.log(data.msg);
+                            }
+                        }else{
+                            console.log(data.msg);
+                        }
+                    },
+                });
+            }
+
+        function districtList(city,district){
+                $.ajax({
+                    url:publicPath+"/api/common/getAreaData/c003",
+                    type:"post",
+                    data:{pcode:city},
+                    dataType:"json",
+                    success:function(data){
+                        if(data.success){
+                            if(data.code == 0){
+                                var dataJD = data.jsonData;
+                                var html="<option value=''>请选择区</option>";
+                                $.each(dataJD, function(i,item) {
+                                    if(item.areaCode==district){
+                                        html += "<option selected='selected' value='" + item.areaCode + "'>" + item.areaName + "</option>";								
+                                    }else{
+                                        html += "<option value='" + item.areaCode + "'>" + item.areaName + "</option>";
+                                    }
+                                });
+                                $(".alert_address select[name='district']").html(html);
+                                console.log(data.msg);
+                            }else{
+                                console.log(data.msg);
+                            }
+                        }else{
+                            console.log(data.msg);
+                        }
+                    },
+                });
+            }
+//           获取家政员详情
+    function staffXq(staffId, serviceItemCode) {
+            $.ajax({
+                url: publicPath + "/api/houseKeeping/StaffPersonInfo",
+                type: "post",
+                data: {
+                    staffId: staffId
+                },
+                dataType: "json",
+                async: false,
+                success: function success(data) {
+                    if (data.success) {
+                        if (data.code == 0) {
+                            var dataJD = data.jsonData;
+                            var dataJob = data.jsonData.jobInfo;
+                            var cookingFeature = "";
+                            var languageFeature = "";
+                            var characterFeature = "";
+                            var staffName = "";
+                            if (dataJD.sex == "01") {
+                                staffName = dataJD.staffName.split("")[0] + "师傅";
+                            } else if (dataJD.sex == "02") {
+                                staffName = dataJD.staffName.split("")[0] + "阿姨";
+                            }
+                            var fertilitySituation="";
+                            if(dataJD.fertilitySituation=="01"){
+                                fertilitySituation ="已生育";
+                            }else if(dataJD.fertilitySituation=="02"){
+                                fertilitySituation ="未生育";
+                            }
+                            $(".info_r h1").html(staffName+"<span>"+dataJD.age + "岁&nbsp;&nbsp;|&nbsp;&nbsp;属"+ dataJD.zodiac+"&nbsp;&nbsp;|&nbsp;&nbsp;"+dataJD.nativePlace + "人&nbsp;&nbsp;|&nbsp;&nbsp;"+dataJD.constellation+"&nbsp;&nbsp;|&nbsp;&nbsp;"+dataJD.educarion+"</span>").attr("data-staffId",dataJD.staffId)
+                            $(".card_img img").attr("src",dataJD.headImage);
+                            $(".card_img p").html("<p>编号："+dataJD.staffNo+"</p>");
+                            $("#blood").html(dataJD.bloodType);
+                            $("#marry").html(dataJD.maritalStatus);
+                            $("#fertilitySituation").html(fertilitySituation);
+                            $("#weight").html(dataJD.weight);
+                            $("#height").html(dataJD.height);
+
+                             if (dataJob.cookingFeatureValue != null && dataJob.cookingFeatureValue != "") {
+                                if (dataJob.cookingFeatureValue.indexOf(",") != "-1") {
+                                    cookingFeature = dataJob.cookingFeatureValue.replace(/,/g, "、");
+                                } else {
+                                    cookingFeature = dataJob.cookingFeatureValue;
+                                }
+                            }
+                            $("#cooking").html(cookingFeature);
+
+                            if (dataJob.languageFeatureValue != null && dataJob.languageFeatureValue != "") {
+                                if (dataJob.languageFeatureValue.indexOf(",") != "-1") {
+                                    languageFeature = dataJob.languageFeatureValue.replace(/,/g, "、");
+                                } else {
+                                    languageFeature = dataJob.languageFeatureValue;
+                                }
+                            }
+                            $("#language").html(languageFeature);
+
+                            if (dataJob.characerFeatureValue != null && dataJob.characerFeatureValue != "" ) {
+                                if (dataJob.characerFeatureValue.indexOf(",") != "-1") {
+                                    characterFeature = dataJob.characerFeatureValue.replace(/,/g, "、");
+                                } else {
+                                    characterFeature = dataJob.characerFeatureValue;
+                                }
+                            }
+                            $("#character").html(characterFeature);
+
+                            var experience = "";
+                            if(dataJob.experience!="" && dataJob.experience!=null){
+                                if (dataJob.experience== "01") {
+                                    experience ="一年以下";
+                                } else if (dataJob.experience== "02"){
+                                    experience = "1-2年";
+                                }else if (dataJob.experience== "03"){
+                                    experience = "3-5年";
+                                }else if (dataJob.experience== "04"){
+                                    experience = "5年以上";
+                                }
+                            }
+                            
+                            var serviceArea = "";
+                            var serArea = "";
+                            if (dataJob.serviceAreaValue != "" && dataJob.serviceAreaValue !=null) {
+                                serviceArea = dataJob.serviceAreaValue.split(",");
+                                console.log(serviceArea.length);
+                                for (var i = 0; i < serviceArea.length; i++) {
+                                    serArea += serviceArea[i].split(":")[1] + "、";
+                                }
+                                serArea = serArea.substring(0, serArea.length - 1)
+                            } else {
+                                serArea = "不限";
+                            }
+                            var serviceNature = "";
+                            if (dataJob.serviceNature != null && dataJob.serviceNature != "" && typeof(dataJob.serviceNature) != "undefined") {
+                                serviceNature = dataJob.serviceNature;
+                            }
+                        var html2="<span>服务价格：</span>"+RetainedDecimalPlacesNF(dataJob.price)+dataJob.unitValue;
+                            $(".service_box p.service_price").html(html2);
+
+                            $("#workExp").html(experience);
+                            $("#work").html(dataJob.workExperience||"");
+                            $("#myself").html(dataJob.selfEvaluation);
+                            $("#teacher").html(dataJob.teacherEvaluation);
+                            $("#serArea").html(serArea);
+                        }
+                    } else {
+                        console.log(data.msg);
+                    }
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+            $.ajax({
+                url: publicPath + "/api/houseKeeping/StaffServiceInfo",
+                type: "post",
+                data: {
+                    staffId: staffId,
+                    serviceItemCode: serviceItemCode
+                },
+                dataType: "json",
+                async: false,
+                success: function success(data) {
+                    if (data.success) {
+                        if (data.code == 0) {
+                            var dataJD = data.jsonData;
+                            var skills = "";
+                            var serviceItemName="";
+                            var html1 = "";
+                            var html4 = "";
+                            if(dataJD!=""){
+                                $.each(dataJD,function(i,item){
+                                    if (item.skills != null && item.skills != "") {
+                                        if (item.skills.indexOf(",") != "-1") {
+                                            skills += item.skills.replace(/,/g, "、")+"、";
+                                        } else {
+                                            skills += item.skills+"、";
+                                        }
+                                    }
+                                    serviceItemName +=item.serviceItemName+"、";
+                                    if(serviceItemCode==item.serviceItemCode){
+                                        html4 += "<li class='active' data-code='"+item.serviceItemCode+"'>"+item.serviceItemName+"</li>";                                        
+                                    }else{
+                                        html4 += "<li data-code='"+item.serviceItemCode+"'>"+item.serviceItemName+"</li>";
+                                    }
+                                })
+                               skills = skills.substring(0,skills.length-1);
+                               serviceItemName =serviceItemName.substring(0,serviceItemName.length-1);
+                            }
+                            
+                            var html2="<span>服务工种：</span>"+serviceItemName;
+                            var html3= "<span>技能特点：</span>"+skills;
+                            $(".service_box p.gongzhong").html(html2);
+                            $(".service_box p.jineng").html(html3);
+                            $(".info_r_enter ul.gzlist").html(html4);
+                        }
+
+                    } else {
+                        console.log(data.msg);
+                    }
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+            $.ajax({
+                url: publicPath + "/api/houseKeeping/StaffVideoImg",
+                type: "post",
+                data: {
+                    staffId: staffId,
+                    type: "01"
+                },
+                dataType: "json",
+                async: false,
+                success: function success(data) {
+                    if (data.success) {
+                        if (data.code == 0) {
+                            var dataJD = data.jsonData;
+                            var html = "";
+                            if(dataJD!=""){
+                                $.each(dataJD, function(i, item) {
+                                    html += "<video  controls='controls'  src='" + item.path + "' >" +
+                                        "</video>"
+                                });
+                                $(".video_c").html(html);
+                            }else{
+                                $(".video_c").html("<p class='no_info'>暂无视频，敬请期待~</p>");
+                            }
+                            
+                        }
+                    } else {
+                        console.log(data.msg);
+                    }
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+            $.ajax({
+                url: publicPath + "/api/houseKeeping/StaffVideoImg",
+                type: "post",
+                data: {
+                    staffId: staffId,
+                    type: "02"
+                },
+                dataType: "json",
+                async: false,
+                success: function success(data) {
+                    if (data.success) {
+                        if (data.code == 0) {
+                            var dataJD = data.jsonData;
+                            var html = "";
+                            if(dataJD!=""){
+                                 $.each(dataJD, function(i, item) {
+                                    html += "<li class='img_box'>" +
+                                        "</li>";
+                                });
+                                $(".photo_c ul").html(html);
+
+                                for (var i = 0; i < dataJD.length; i++) {
+                                    $(".photo_c ul li").eq(i).css("backgroundImage", "url(" + dataJD[i].path + ")");
+                                }
+                            }else{
+                                  $(".photo_c ul").html("<p class='no_info'>暂无照片，敬请期待~</p>");
+                            }
+                           
+                        }
+                    } else {
+                        console.log(data.msg);
+                    }
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+            $.ajax({
+                url: publicPath + "/api/houseKeeping/StaffCertType",
+                type: "post",
+                data: {
+                    staffId: staffId
+                },
+                dataType: "json",
+                async: false,
+                success: function success(data) {
+                    if (data.success) {
+                        if (data.code == 0) {
+                            var dataJD = data.jsonData;
+                            var html = "";
+                            $.each(dataJD, function(i, item) {
+                                var authenticatGrade = ""
+                                if (item.authenticatGrade != "") {
+                                    authenticatGrade = "（" + item.authenticatGrade.split(",")[1] + "）";
+                                }
+                                html += "<li>" + item.certType + authenticatGrade + "</li>";
+                            });
+                            $("#cerd").append(html);
+                        }
+                    } else {
+                        console.log(data.msg);
+                    }
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            });
+
+        }
+// 预约
+        function reqSubmit() {
+            var objct = GetRequest();
+            var staffId = objct.staffId;
+            var serviceItemCode = objct.serviceItemCode;
+
+            // 服务地址
+             getNewAddress();
+
+            //服务技能加载
+            pullSkills(serviceItemCode);
+           
+            // 工种预约弹窗
+            $(".info_list").hide();
+            $(".gz"+serviceItemCode).show();
+            $(".common").show();
+            $(".mask,.alert_info").show();
+            
+            $("#submit").click(function(e) { 
+                var serviceItemCode = $(".gzlist li.active").data("code");
+                e.preventDefault();
+                //提交验证
+                $("#info_enter input,#info_enter textarea,#per_info input").trigger("blur");
+                // 下拉筛选
+                if (!($("#baby").is(':checked'))) {
+                    var self = $("#xdt");
+                    if (self.val() == "") {
+                        onError('*请选择日期', self);
+                    } else {
+                        onSuccess(self);
+                    }
+                }
+                $("#dpd1,#dpd2,#datesecond1,#datesecond2").each(function() {
+                    var self = $(this);
+                    if (self.val() == "") {
+                        onError('*请选择日期', self);
+                    } else {
+                        onSuccess(self);
+                    }
+                });
+                if($(".gz"+serviceItemCode).find(".serType li.active").length<1){
+                        self = $(".gz"+serviceItemCode+" .serType li:last")
+                        onError('*请选择服务类型', self);
+                    } else {
+                        onSuccess(self);
+                    }
+               
+                if ($(".gz"+serviceItemCode+" .prompt").length > 0) {
+                    return;
+                };
+                if($(".address_box").find("input[name='addressId']").length<1){
+                     $(".no_address").remove();
+                    $(".address_box").after("<div class='no_address'>请添加地址</div>");
+                    return;
+                }else{
+                    $(".no_address").remove();
+                }
+                var $input = $("input[name='addressId']:checked").parents(".address_list");
+                var customerMobile = $input.find("input[name='phone']").val();
+                var customerName = $input.find("input[name='userName']").val();
+                var serviceProvice = $input.find("input[name='province']").val();
+                var serviceCity = $input.find("input[name='city']").val();
+                var serviceCounty = $input.find("input[name='district']").val();
+                var serviceAddress =$input.find("input[name='address']").val();
+                var remarks = $(".textarea").val();
+                var salarySkills = "";
+                $(".otherReq li").each(function() {
+                    if ($(this).hasClass("active")) {
+                        salarySkills += $(this).attr("data-skills") + ",";
+                    }
+                })
+                if (salarySkills != "") {
+                    salarySkills = salarySkills.substring(0, salarySkills.length - 1);
+                }
+                var params = {};
+                if(serviceItemCode == 01){
+                    if ($("#baby").is(":checked")) {
+                        var isBabyBorn = "1"
+                    } else {
+                        var isBabyBorn = "0";
+                        var expectedBirth = $("#xdt").val();
+                    }
+                    var serviceStart = $("#dpd1").val();
+                    var serviceEnd = $("#dpd2").val();
+
+                    params = {
+                            customerMobile: customerMobile,
+                            customerName: customerName,
+                            serviceProvice: serviceProvice,
+                            serviceCity: serviceCity,
+                            serviceCounty: serviceCounty,
+                            serviceAddress: serviceAddress,
+                            remarks: remarks,
+                            isBabyBorn: isBabyBorn,
+                            expectedBirth: expectedBirth,
+                            serviceStart: serviceStart,
+                            serviceEnd: serviceEnd,
+                            salarySkills: salarySkills,
+                            serviceItemCode: "01",
+                            staffId: staffId,
+                            serviceType: "01"
+                    };
+                }else if(serviceItemCode == 02){
+                    var serviceStart = $("#dpd1").val();
+                    var serviceEnd = $("#dpd2").val();
+                    params = {
+                            customerMobile: customerMobile,
+                            customerName: customerName,
+                            serviceProvice: serviceProvice,
+                            serviceCity: serviceCity,
+                            serviceCounty: serviceCounty,
+                            serviceAddress: serviceAddress,
+                            remarks: remarks,
+                            serviceStart: serviceStart,
+                            serviceEnd: serviceEnd,
+                            salarySkills: salarySkills,
+                            serviceItemCode: "02",
+                            staffId: staffId,
+                            serviceType: "01"
+                        };
+
+                }else if(serviceItemCode == 03){
+                     var serviceStart = $("#datesecond1").val();
+                    var serviceEnd = $("#datesecond2").val();
+                    var serviceType = $(".gz03 .serType li.active").attr("data-serCode");
+                    params = {
+                            customerMobile: customerMobile,
+                            customerName: customerName,
+                            serviceProvice: serviceProvice,
+                            serviceCity: serviceCity,
+                            serviceCounty: serviceCounty,
+                            serviceAddress: serviceAddress,
+                            remarks: remarks,
+                            serviceStart: serviceStart,
+                            serviceEnd: serviceEnd,
+                            salarySkills: salarySkills,
+                            serviceItemCode: "03",
+                            staffId: staffId,
+                            serviceType: serviceType
+                        };
+
+                }else if(serviceItemCode == 04){
+                    var selfCares = $(".oldSelf li.active").attr("data-serCode");
+                    var serviceType = $(".gz04 .serType li.active").attr("data-serCode");
+                    var serviceStart = $("#datesecond1").val();
+                    var serviceEnd = $("#datesecond2").val();
+                    params = {
+                            customerMobile: customerMobile,
+                            customerName: customerName,
+                            serviceProvice: serviceProvice,
+                            serviceCity: serviceCity,
+                            serviceCounty: serviceCounty,
+                            serviceAddress: serviceAddress,
+                            remarks: remarks,
+                            selfCares: selfCares,
+                            serviceStart: serviceStart,
+                            serviceEnd: serviceEnd,
+                            salarySkills: salarySkills,
+                            serviceType: serviceType,
+                            serviceItemCode: "04",
+                            staffId: staffId
+                        };
+
+                }else if(serviceItemCode == 05){
+                    var serviceType = $(".gz05 .serType li.active").attr("data-serCode");
+                    var serviceStart = $("#datesecond1").val();
+                    var serviceEnd = $("#datesecond2").val();
+                    params = {
+                            customerMobile: customerMobile,
+                            customerName: customerName,
+                            serviceProvice: serviceProvice,
+                            serviceCity: serviceCity,
+                            serviceCounty: serviceCounty,
+                            serviceAddress: serviceAddress,
+                            remarks: remarks,
+                            serviceStart: serviceStart,
+                            serviceEnd: serviceEnd,
+                            salarySkills: salarySkills,
+                            serviceType: serviceType,
+                            serviceItemCode: "05",
+                            staffId: staffId
+                        };
+
+                }else if(serviceItemCode == 06){
+                    var serviceStart = $("#dpd1").val();
+                    var serviceEnd = $("#dpd2").val();
+                    params = {
+                            customerMobile: customerMobile,
+                            customerName: customerName,
+                            serviceProvice: serviceProvice,
+                            serviceCity: serviceCity,
+                            serviceCounty: serviceCounty,
+                            serviceAddress: serviceAddress,
+                            remarks: remarks,
+                            serviceStart: serviceStart,
+                            serviceEnd: serviceEnd,
+                            salarySkills: salarySkills,
+                            serviceType: "01",
+                            serviceItemCode: "06",
+                            staffId: staffId
+                        };
+
+                }else if(serviceItemCode == 07){
+                     var serviceType = $(".gz07 .serType li.active").attr("data-serCode");
+                    var serviceStart = $("#datesecond1").val();
+                    var serviceEnd = $("#datesecond2").val();
+                    params =  {
+                            customerMobile: customerMobile,
+                            customerName: customerName,
+                            serviceProvice: serviceProvice,
+                            serviceCity: serviceCity,
+                            serviceCounty: serviceCounty,
+                            serviceAddress: serviceAddress,
+                            remarks: remarks,
+                            serviceStart: serviceStart,
+                            serviceEnd: serviceEnd,
+                            salarySkills: salarySkills,
+                            serviceType: serviceType,
+                            serviceItemCode: "07",
+                            staffId: staffId
+                        };
+                }
+              
+                 //提交
+                    $.ajax({
+                        url: publicPath + "/api/service/subreq",
+                        type: "post",
+                        data:params,
+                        dataType: "json",
+                        success: function success(data) {
+                            if (data.success) {
+                                if (data.code == 0) {
+                                    $(".alert_info").hide();
+                                    $(".alert_success").show();
+                                }
+                            } else {
+                                if (data.code == 999016) {
+                                    $(".mask_s").show();
+                                }
+                                if (data.code == 999010) {
+                                    alert(data.msg);
+                                    window.location.href = "login.html";
+                                }
+                                console.log(data.msg);
+                            }
+                        }
+                    });
+            })
+
+        }
+        $(function() {
+
+            var objct = GetRequest();
+            var staffId = objct.staffId;
+            var serviceItemCode = objct.serviceItemCode;
+            staffXq(staffId, serviceItemCode);
+            //加载省
+            $.ajax({
+                type:"POST",
+                url:publicPath+"/api/common/getAreaData/c001",
+                success:function(data){
+                    if(data.success){
+                        if(data.code == 0){
+                            var dataJD = data.jsonData;
+                            var html = "<option value=''>请选择省</option>";
+                            $.each(dataJD, function(i,item) {
+                                html += "<option value='" + item.areaCode + "'>" + item.areaName + "</option>";
+                            });
+                            $("select[name='province']").html(html);
+                            console.log(data.msg);
+                        }else{
+                            console.log(data.msg);
+                        }
+                    }else{
+                        console.log(data.msg);
+                    }
+                },
+                error:function(){
+
+                }
+            });
+//      滚动页面顶部菜单的变化
+            var timeout = false;
+            var height = $(".menu_li").height();
+            $(window).scroll(function() {
+                if (timeout) {
+                    clearTimeout(timeout);
+                }
+                timeout = setTimeout(function() {
+                    var offset0 = $(".basic").offset().top - height;
+                    if ($("body").scrollTop() > offset0) {
+                        $(".menu_li").addClass("fix");
+                        $(".yuyue").addClass("yuyue_fix");
+                    } else {
+                        $(".menu_li").removeClass("fix");
+                        $(".yuyue").removeClass("yuyue_fix");
+                    }
+
+                    var p_length = $("div.tab_content_sp").length - 1;
+                    for (i = p_length; i >= 0; i--) {
+                        var i_top = $("div.tab_content_sp").eq(i).offset().top - height;
+                        if ($("body").scrollTop() >= i_top) {
+                            $(".menu_li li").eq(i).addClass("active")
+                                .siblings().removeClass("active");
+                            break;
+                        }
+                    }
+                })
+            });
+    //            点击预约面试
+            $(".detail_info").on("click", "input[type='button']", function() {
+                $.ajax({
+                    url: publicPath + "/api/common/isLogin",
+                    type: "post",
+                    data: {},
+                    dataType: "json",
+                    success: function success(data) {
+                        if (data.success) {
+                            if (data.code == 0) {
+                                reqSubmit();
+                            }
+                        } else {
+                            if (data.code = 999010) {
+                                location.href = "login.html";
+                            }
+                            console.log(data.msg);
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                    }
+                });
+            })
+            // 预约相关
+
+            //预约弹窗关闭
+            $(".close").click(function() {
+                $(".mask,.alert_info,.alert_success").hide();
+            });
+            // 单选
+            $(".select0").on("click","li",function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            })
+
+            //筛选
+            $(".info_r_enter").on("click","ul.otherReq li",function(){
+                 if($(this).hasClass("active")){
+                   $(this).removeClass("active"); 
+                }else{
+                   $(this).addClass("active");                     
+                }
+            });
+            $(".info_r_enter").on("click","ul.gzlist li",function(){
+                $(this).addClass("active").siblings().removeClass("active");
+                var serviceItemCode=$(this).data("code");
+                $(".info_list").hide();
+                $(".gz"+serviceItemCode).show();
+                $(".common").show();
+                pullSkills(serviceItemCode);
+            });
+            $("select[name='province']").change(function(){
+                var province = $(this).val();
+                cityList(province,"");
+            });
+            $("select[name='city']").change(function(){
+                var city = $(this).val();
+                districtList(city,"");
+            });
+            //预产期
+            $("#baby").click(function() {
+                if ($("#baby").is(':checked')) {
+                    $(this).parent(".checkbox_box").siblings("#xdt").attr("disabled", "disabled").val('');
+                    self = $("#xdt");
+                    onSuccess(self);
+                } else {
+                    $(this).parent(".checkbox_box").siblings("#xdt").removeAttr("disabled");
+                }
+            });
+            $(".address_box").on("click",".more_ad",function(){
+                getAddress();
+                $(this).hide();
+            })
+            // 预约表单验证
+            var regName = /^[\u4E00-\u9FA5]{1,15}$/; //姓名
+             var regTel = /^1(3|4|5|7|8)\d{9}$/; //电话
+            $("#info_enter input,#info_enter textarea,#per_info input").blur(function() {
+                var self = $(this);
+                var name = $(this).attr("name");
+                switch (name) {
+                    case "datesecond1":
+                        var now = new Date();
+                        var startTime = $("#datesecond1").val();
+                        var start = new Date(startTime.replace("-", "/").replace("-", "/"));
+                        var endTime = $("#datesecond2").val();
+                        var end = new Date(endTime.replace("-", "/").replace("-", "/"));
+                        if (start < now) {
+                            onError('*开始时间必须大于当前时间', self);
+
+                        } else if (end < start) {
+                            onError('*开始时间必须大于结束时间', self);
+                        } else {
+                            onSuccess(self);
+                        }
+                        break;
+                    case "datesecond2":
+                        var now = new Date();
+                        var startTime = $("#datesecond1").val();
+                        var start = new Date(startTime.replace("-", "/").replace("-", "/"));
+                        var endTime = $("#datesecond2").val();
+
+                        var end = new Date(endTime.replace("-", "/").replace("-", "/"));
+                        if (start < now) {
+                            onError('*开始时间必须大于当前时间', self);
+                        } else if (end < start) {
+                            onError('*开始时间必须大于结束时间', self);
+                        } else {
+                            onSuccess(self);
+                        }
+                        break;
+                    case "special":
+                        if (self.val().length >= 200) {
+                            onError('*不能超过200个汉字', self);
+                        } else {
+                            onSuccess(self);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            // 地址表单验证
+            var regQQ=/^$|^[1-9][0-9]{4,15}$/;	        //qq号码
+		    var regWechat=/^$|^[a-zA-Z\d_]{5,20}$/;	//微信号
+            $("#edit_ad input,#edit_ad select").blur(function(){
+                var self = $(this);
+                var name = $(this).attr("name");
+                switch(name){
+                    case "userName":
+                        if(self.val()==""){
+                            onError("*请输入姓名",self);
+                        }else{
+                            onSuccess(self);
+                        }
+                        break;
+                    case "phone":
+                        if(self.val()==""){
+                            onError("*请输入电话",self);
+                        }else if (!regTel.test(self.val())) {
+                            onError('*请填写正确的电话', self);
+                        }else{
+                            onSuccess(self);
+                        }
+                        break;
+                    case "province":
+                        if(self.val()==""){
+                            onError("*请选择地址",self);
+                        }else{
+                            onSuccess(self);
+                        }
+                        break;
+                    case "city":
+                        if(self.val()==""){
+                            onError("*请选择地址",self);
+                        }else{
+                            onSuccess(self);
+                        }
+                        break;
+                    case "district":
+                        if(self.val()==""){
+                            onError("*请选择地址",self);
+                        }else{
+                            onSuccess(self);
+                        }
+                        break;
+                    case "address":
+                        if(self.val()==""){
+                            onError("*请填写地址",self);
+                        }else if(self.val().length>=80){
+                            onError("*不能超过80个汉字",self);
+                        }else{
+                            onSuccess(self);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            });
+            //菜单点击滚动
+            var $div_li = $(".menu_li li");
+            $div_li.click(function() {
+                $(this).addClass("active")
+                    .siblings().removeClass("active");
+                var index = $div_li.index(this);
+                var offset_index = $(".tab_content_sp").eq(index).offset().top - height;
+                $('html, body').animate({
+                    scrollTop: offset_index
+                }, 400);
+            });
+            $(".alert_bt .ok").click(function() {
+                $(".mask_s").hide();
+            });
+//        宝宝是否出生
+        $("body").on("change", ".checkbox_box input", function() {
+                var state = $(this).prop("checked");
+                if (state) {
+                    $(this).siblings(".check-box").addClass("active");
+                } else {
+                    $(this).siblings(".check-box").removeClass("active");
+                }
+            });
+            // 地址选择
+            $(".address_box").on("click",".radio_box input[type='radio']",function(){
+                 $(this).siblings(".circle-box").addClass("active");
+                $(this).parents(".address_list").siblings(".address_list").find(".circle-box").removeClass("active");
+            });
+            $(".address_box").on("click",".address—info",function(){
+                $(this).siblings(".radio_box").children("input[type='radio']").trigger("click");
+            });
+            // 新增地址
+            $(".address_box").on("click",".add_address",function(){
+                $("#edit_ad h1").html("新增服务地址");
+                $(".mask_sp,#edit_ad").show();
+                $(".ad_info_enter_r input,.ad_info_enter_r select,#edit_ad input[name='id']").val("");
+                 $("select[name='city'],select[name='district']").html("<option value=''>请选择</option>");
+            });
+
+            // 修改地址
+             $(".address_box").on("click",".edit_ad",function(){
+                 var id=$(this).parents(".address_list").find("input[type='radio']").val();
+		    	$("#edit_ad input[name='id']").val(id);
+                $.ajax({
+                    url:publicPathCmn+"/api/user/address/"+id,
+                    type:"get",
+                    data:{},
+                    dataType:"json",
+                    success:function(data){
+                        if(data.success){
+                            if(data.code == 0){
+                                $("#edit_ad h1").html("修改服务地址");
+                                $(".mask_sp,#edit_ad").show();
+                                var dataJD = data.jsonData;
+                                $("#edit_ad input[name='userName']").val(dataJD.userName||"");
+                                $("#edit_ad input[name='phone']").val(dataJD.phone||"");
+                                $("#edit_ad input[name='address']").val(dataJD.address);
+                                $("#edit_ad select[name='province']").val(dataJD.province);
+                                cityList(dataJD.province,dataJD.city);
+                                districtList(dataJD.city,dataJD.district);
+
+                            }else{
+                                console.log(data.msg);
+                            }
+                        }else{
+                            console.log(data.msg);
+                        }
+                    },
+                });
+            });
+        
+    // 提交保存地址
+		$("#ad_save").click(function(){
+			$("#edit_ad input,#edit_ad select").trigger("blur");
+			if ($("#edit_ad .prompt").length>0) {
+						return;
+			};
+			var addressId="";
+			if($("#edit_ad input[name='id']").val()!=""){
+				addressId = "/"+$("#edit_ad input[name='id']").val();
+			}
+			var userName = $("#edit_ad input[name='userName']").val();
+			var phone = $("#edit_ad input[name='phone']").val();
+			var province = $("#edit_ad select[name='province']").val();
+			var city = $("#edit_ad select[name='city']").val();
+			var district = $("#edit_ad select[name='district']").val();
+			var address = $("#edit_ad input[name='address']").val();
+			$.ajax({
+				url:publicPathCmn+"/api/user/address"+addressId,
+				type:"post",
+				data:{
+					userName:userName,
+					phone:phone,
+					province:province,
+					city:city,
+					district:district,
+					address:address
+					},
+				dataType:"json",
+				success:function(data){
+					if(data.success){
+		                if(data.code == 0){
+                            $("#edit_ad,.mask_sp").hide();
+		                	 getAddress();
+		                	console.log(data.msg);
+		                }else{
+		                    console.log(data.msg);
+		                }
+		            }else{
+                        if(data.code == 90001){
+							$("#edit_ad").hide();
+                            $("#save_ad").show();
+		                	console.log(data.msg);
+		                }
+		                console.log(data.msg);
+		            }
+				},
+			});
+
+		})
+            //关闭地址弹窗
+            $(".ad_close").click(function(){
+                $(".mask_sp,.alert_address").hide();
+            });
+            //关闭地址弹窗
+            $("#cancel").click(function(){
+                $(".mask_sp,.alert_address").hide();
+                getAddress();//重新加载地址
+            });
+        })
+
+        function onError(msg, self) {
+            if (self.nextAll().hasClass('prompt')) {
+                self.nextAll('.prompt').text(msg);
+                return;
+            }
+            self.parent().append("<span class='prompt'>" + msg + "</span>");
+        }
+
+        function onSuccess(self) {
+            self.nextAll('.prompt').remove();
+        }
+
+        function phototop() {
+            //计算居中位置
+            var scrolltop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            var top = scrolltop + ($(window).height() - $(".photo-div").height()) / 2;
+            $(".photo-panel").css({
+                "top": "" + top + "px"
+            });
+        }
+        //自适应预览
+        function photoView(obj, img_src) {
+            if ($(obj).width() >= $(obj).height()) {
+                $(".photo-panel .photo-div .photo-img .photo-view-h").attr("class", "photo-view-w");
+                $(".photo-panel .photo-div .photo-img .photo-view-w img").attr("src", img_src);
+            } else {
+                $(".photo-panel .photo-div .photo-img .photo-view-w").attr("class", "photo-view-h");
+                $(".photo-panel .photo-div .photo-img .photo-view-h img").attr("src", img_src);
+            }
+
+            console.log(img_index);
+
+            console.log(img_src);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+body{
+	background-color:#f8f8f8;
+  }
+.main_content {
+	margin-bottom: 200px;
+	min-height:450px;
+	padding-bottom: 100px;
+}
+.main_box {
+    padding: 25px 40px 0;
+}
+.main_box h2.title_s {
+    color: #343434;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.main_content h2 span {
+    color: #d6d6d6;
+    font-size: 14px;
+}
+.write,.add_ad{
+		display: block;
+		color: #ff9900;
+		font-size: 14px;
+		cursor: pointer;
+		/* background: url(../img/write.png) no-repeat; */
+		float: right;
+		margin-right: 20px;
+		padding-left: 24px;
+		line-height: 24px;
+        /* background-position: left center; */
+            font-weight: normal;
+}
+
+/* .person_file table {
+    padding-top: 15px;
+	border-top: 1px solid #f1f1f1;
+	    margin-bottom: 40px;
+}
+.person_file table tr td {
+    padding: 7px 5px;
+    line-height: 28px;
+} */
+.person_file_name {
+	    width: 110px;
+    text-align: right;
+    vertical-align: top;
+    color: #6e6e6e;
+    font-size: 14px;
+}
+
+.person_file_cont {
+	width: 450px;
+}
+.pro_btn {
+	    height: 36px;
+    margin-top: 60px;
+}
+.pro_btn button{
+	    width: 88px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 30px;;
+}
+.pro_btn_sub {
+    background-color: #ff9900;
+}
+
+.pro_file_int {
+	display: none;
+}
+.person_file {
+    padding: 25px 67px 60px;
+    border: 1px solid #f0f0f0;
+}
+
+.person_file ul li label {
+    float: left;
+    color: #a8a8a8;
+    width: 82px;
+}
+
+.person_file ul li {
+    margin-bottom: 18px;
+    overflow: hidden;
+    line-height: 28px;
+}
+.person_file ul li .list {
+    padding-left: 82px;
+    color: #343434;
+}
+.person_file ul li span.tip {
+    color: #d6d6d6;
+    margin-left: 20px;
+}
+.radio_box_box{
+    float: left;
+    width: 72px;
+}
+.radio_box {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin-right: 14px;
+    margin-top: 4px;
+        float: left;
+}
+.radio_box input[type='radio'] {
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: 3;
+    margin: 0 !important;
+    cursor: pointer;
+}
+.circle-box {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #959594;
+    line-height: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.circle-box span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ff9900;
+    border-radius: 100%;
+    display: none;
+        margin-top: 4px;
+}
+.radio_box .active {
+    border: 1px solid #ff9900;
+}
+.radio_box .active span {
+    display: inline-block;
+}
+/* .person_file select{
+	border: 1px solid #b3b3b3;
+	height: 26px;
+	padding:0 0 0 8px;
+	font-size: 14px;
+	font-size: 14px;
+    font-family: "Microsoft YaHei", "΢���ź�", Arial, sans-serif;
+}
+.person_file_area input{
+	width: 412px;
+}
+.person_file input.address{
+	margin-top:16px;
+	width:430px;
+} */
+.edit{
+	line-height: 0;
+	display:none;
+}
+.person_file input[type='text']{
+	border: 1px solid #d6d6d6;
+    height: 26px;
+    width: 120px;
+    padding: 0 10px;
+    line-height: 26px;
+    border-radius: 4px;
+}
+.pro_file_meg {
+    width: auto;
+    height: auto;
+    margin-top: 70px;
+}
+
+.pro_file_meg table {
+       border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+}
+.pro_file_meg table td {
+        border-top: 1px solid #f0f0f0;
+    padding: 5px 5px;
+    line-height: 28px;
+    color: #6e6e6e;
+    height: 76px;
+}
+.pro_file_meg table thead td {
+       color: #888888;
+    background-color: #f5f5f5;
+    height: 60px;
+}
+ .pro_file_meg table td.center{
+	text-align: center;
+} 
+/* .pro_file_meg table td:first-child {
+    padding-left: 20px;
+} */
+
+.pro_file_meg table td a {
+    color: #6e6e6e;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.pro_file_meg table td a:hover {
+    color: #ff9900;
+}
+p.no_address {
+    text-align: center;
+    color: #808080;
+    line-height: 30px;
+}
+.validation{
+	color:red;
+	font-size:14px;
+	line-height: 28px;
+}
+/* 地址弹窗 */
+.alert_address {
+     display: none; 
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1022;
+    background-color: #fff;
+    width: 620px;
+    margin-left: -310px;
+    border-radius: 8px;
+    /* height: 430px; */
+    margin-top: -215px;
+	overflow: hidden;
+	padding-bottom: 35px;
+}
+#delete_ad {
+    margin-top: -110px;
+}
+.alert_address p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 30px 0;
+}
+.alert_button {
+    text-align: center;
+}
+.alert_button a {
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+	border-radius: 2px;
+	    display: inline-block;
+    line-height: 36px;
+}
+.alert_button .cancel {
+    background-color: #cccccc;
+    margin-right: 28px;
+}
+.alert_button .confirm {
+    background-color: #ff9900;
+}
+.ad_close {
+    background: url(../img/adclose.png) no-repeat;
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    right: 23px;
+    top: 23px;
+    cursor: pointer;
+}
+.alert_address h1 {
+    background-color: #f2f2f2;
+    color: #888888;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 20px 0 20px 25px;
+}
+.ad_info_box {
+    padding-left: 55px;
+    padding-top: 30px;
+}
+.ad_info_enter {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.ad_info_enter label {
+    display: block;
+    width: 96px;
+    padding: 10px 0;
+    line-height: 24px;
+    float: left;
+    font-size: 16px;
+}
+.ad_info_enter .ad_info_enter_r {
+    padding-left: 96px;
+}
+.ad_info_enter .ad_info_enter_r input {
+    width: 230px;
+    height: 42px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.ad_info_enter .ad_info_enter_r input.address {
+    width: 340px;
+}
+.ad_info_enter .ad_info_enter_r select {
+    width: 100px;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    margin-right: 13px;
+    background-color: #fff;
+    font-size: 16px;
+}
+.ad_save {
+    text-align: center;
+    padding-top: 10px;
+}
+.ad_save a {
+    width: 120px;
+    line-height: 50px;
+    display: inline-block;
+    background-color: #ff9900;
+    outline: none;
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+}
